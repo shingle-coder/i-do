@@ -10,6 +10,17 @@
 - 部署服务器：`119.29.173.147`（`root`，密钥 `.ssh/119.29.173.147.pem`）
 - 本地配置：`.env`（已被 `.gitignore` 忽略，禁止入库）
 
+## 进度概览
+
+- [x] 二开仓库建立，推送 cnb 与 GitHub 镜像，默认分支统一为 `main`
+- [x] 桌面图标、托盘图标、Web 安装图标、文档站字标替换为 i-do 素材
+- [x] 中英文 README 改写，文档门禁全绿
+- [ ] 产品名、应用标识、协议、域名、界面与安装器文案替换
+- [ ] 文档站配置与各包发布元数据改名
+- [ ] 未签名安装包验证、签名与分发流程
+
+上游同步方式与冲突处理规则见 [二开修改清单](fork-changes.md)。`d:/ai/deepseek/deepseek-harness` 作为只读镜像与 GitHub 上游保持一致，二开仓库通过 `upstream` remote 直接跟随上游，基线目录仅用于本地比对。
+
 ## 1. 一期目标与边界
 
 ### 1.1 本期必须完成
@@ -115,7 +126,7 @@
 
 ### 3.1 建立二开工作区（已完成）
 
-当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，本地分支已由 `master` 重命名为 `main` 并跟踪 `origin/main`，基线版本 `0.2.2-rc.2`，保留完整上游历史；`origin` 已指向 cnb，`github` 指向 GitHub 镜像，两者默认分支均为 `main`，且远端只保留 `main`。工作区已包含：
+当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，本地分支已由 `master` 重命名为 `main` 并跟踪 `origin/main`，基线版本 `0.2.2-rc.2`，保留完整上游历史。远程关系为：`origin` 指向 cnb 主仓库、`github` 指向 GitHub 镜像、`upstream` 指向 GitHub 上游、`baseline` 指向本地基线目录；cnb 与 GitHub 的默认分支均为 `main`，远端只保留 `main`。工作区已包含：
 
 - 上游完整源码（不含 `node_modules`、构建产物）
 - `docs/logo/` 品牌素材与本文档
@@ -201,6 +212,18 @@ git push --force github main
 - `.env`、`.ssh/` 均不得入库；`.ssh/` 已写入 `.git/info/exclude`，`.env` 由仓库 `.gitignore` 覆盖。
 - 上述凭据曾以明文形式散落记录，建议在仓库公开或协作扩大前统一轮换，并改为部署平台的环境变量注入。
 - 文档、日志、CI 输出中只允许出现变量名，不得回显取值。
+
+### 3.5 上游同步
+
+```powershell
+git fetch upstream
+git merge upstream/master
+node scripts/brand/render-icons.mjs
+pnpm --filter @deepseek-ai/dsh-web-frontend run render:app-icons
+pnpm run test:docs
+```
+
+冲突处理规则、修改清单与同步后校验项统一维护在 [二开修改清单](fork-changes.md)，本文不再重复。
 
 ## 4. 品牌替换实施步骤
 
