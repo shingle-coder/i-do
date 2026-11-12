@@ -338,6 +338,9 @@ export default withMermaid({
     },
   },
   vite: {
+    // Mermaid loads part of its graph lazily, so the scanner misses the CommonJS `fastdom`
+    // files it imports; pre-bundling both entries gives them ESM default-export interop.
+    optimizeDeps: { include: ['fastdom', 'fastdom/extensions/fastdom-promised.js'] },
     // `srcDir` puts the Vite root inside the disposable generated tree, whose
     // own `public/` no tracked asset can live in.
     publicDir: resolve(import.meta.dirname, '../public'),

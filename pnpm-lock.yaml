@@ -19117,6 +19117,9 @@ importers:
       debug:
         specifier: 4.4.3
         version: 4.4.3(supports-color@9.4.0)
+      fastdom:
+        specifier: 1.0.12
+        version: 1.0.12
       mermaid:
         specifier: 11.17.2
         version: 11.17.2
