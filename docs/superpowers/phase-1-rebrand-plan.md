@@ -115,7 +115,7 @@
 
 ### 3.1 建立二开工作区（已完成）
 
-当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，分支 `master`，基线提交 `e8f7b93a34`，保留完整上游历史；`origin` 仍指向本地基线路径，等待切换到 cnb。工作区已包含：
+当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，本地分支已由 `master` 重命名为 `main` 并跟踪 `origin/main`，基线提交 `e8f7b93a34`，保留完整上游历史；`origin` 已指向 cnb，`github` 指向 GitHub 镜像，两者默认分支均为 `main`，且远端只保留 `main`。工作区已包含：
 
 - 上游完整源码（不含 `node_modules`、构建产物）
 - `docs/logo/` 品牌素材与本文档
@@ -157,16 +157,16 @@ git fetch origin
 git tag backup/cnb-before-overwrite origin/HEAD 2>$null
 
 # 用本地覆盖线上（确认 D8 已批准后执行）
-git push --force origin master
+git push --force origin main
 
 # 同步到 GitHub 镜像（同样覆盖）
-git push --force github master
+git push --force github main
 ```
 
 要点：
 
 - `--force` 会重写线上历史，执行前必须完成 D8 确认与 `backup/cnb-before-overwrite` 备份；GitHub 镜像同样会被覆盖。
-- cnb 默认分支若是 `main`，需改为 `git push --force origin master:main` 或在仓库设置里调整默认分支。
+- cnb 与 GitHub 的默认分支均已设为 `main`，远端不再保留 `master`；本地分支同为 `main` 并跟踪 `origin/main`。
 - 若仓库开启了分支保护，需先在 cnb / GitHub 控制台临时关闭，推送完成后再恢复。
 - 认证使用 cnb 访问令牌与 GitHub PAT（存放于 `.env` 的 `VITE_GIT_REPO`、`GITHUB_TOKEN`），不要把令牌写入 remote URL 或提交历史。
 
@@ -329,5 +329,5 @@ pnpm docs:check
 
 # 仓库
 git remote -v
-git push --force origin master
+git push --force origin main
 ```
