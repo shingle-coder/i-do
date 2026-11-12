@@ -303,6 +303,11 @@ function toSmoothPath(points) {
 
 /**
  * 组装带圆角底板的图标 SVG。
+ *
+ * 输出结构固定为：底板阴影组 → 底板矩形 → 图形组 → 图形。
+ * `apps/web/scripts/render-app-icons.ts` 依赖 `filter0_d` 与 `filter1_ddi` 两个组的固定字符串
+ * （分别用于裁掉窗口阴影、单独放大可遮罩图形），因此这里的组名与属性顺序不可随意调整。
+ *
  * @param body 图形路径集合。
  * @param title 文档标题，同时用于辅助技术朗读。
  * @param options.canvas 画布边长。
@@ -326,12 +331,22 @@ function buildIconDocument(body, title, options) {
     <stop offset="0.45" stop-color="#4E9FC6"/>
     <stop offset="1" stop-color="#63B7D9"/>
   </linearGradient>
+  <filter id="filter0_d_1637_371" x="0" y="0" width="100%" height="100%">
+    <feOffset dx="0" dy="0"/>
+  </filter>
+  <filter id="filter1_ddi_1637_371" x="0" y="0" width="100%" height="100%">
+    <feOffset dx="0" dy="0"/>
+  </filter>
 </defs>
 ${open}
+<g filter="url(#filter0_d_1637_371)">
 <rect x="${TILE.insetX}" y="${TILE.insetY}" width="${TILE.edge}" height="${TILE.edge}" rx="${TILE.radius}" fill="url(#ido-tile)"/>
+<g filter="url(#filter1_ddi_1637_371)">
 <g${glyphId === undefined ? '' : ` id="${glyphId}"`}>
 <g transform="translate(${TILE.insetX + TILE.edge / 2} ${TILE.insetY + TILE.edge / 2}) scale(${GLYPH_SCALE}) translate(-512 -512)">
 ${body}
+</g>
+</g>
 </g>
 </g>
 ${close}
