@@ -1,0 +1,915 @@
+﻿相对路径	字节	行数	扩展名	一级目录	二级目录
+.claude/skills	17	1		.claude	
+.editorconfig	286	8	.editorconfig	.	
+.env	1536	42	.env	.	
+.gitattributes	1379	27	.gitattributes	.	
+.github/AGENTS.md	4643	11	.md	.github	
+.github/dependabot.yml	1105	45	.yml	.github	
+.github/ISSUE_TEMPLATE/bug.md	494	25	.md	.github	ISSUE_TEMPLATE
+.github/ISSUE_TEMPLATE/config.yml	28	1	.yml	.github	ISSUE_TEMPLATE
+.github/ISSUE_TEMPLATE/feature.md	265	13	.md	.github	ISSUE_TEMPLATE
+.github/ISSUE_TEMPLATE/task.md	228	13	.md	.github	ISSUE_TEMPLATE
+.github/issue-management/config.json	414	19	.json	.github	issue-management
+.github/issue-management/github.mjs	10912	300	.mjs	.github	issue-management
+.github/issue-management/lifecycle.mjs	5522	155	.mjs	.github	issue-management
+.github/issue-management/policy.mjs	1141	29	.mjs	.github	issue-management
+.github/issue-management/policy.test.mjs	48163	1176	.mjs	.github	issue-management
+.github/issue-management/pull-request.mjs	5099	126	.mjs	.github	issue-management
+.github/issue-management/README.i18n.yaml	1100	34	.yaml	.github	issue-management
+.github/issue-management/README.md	6901	95	.md	.github	issue-management
+.github/issue-management/README.zh.md	6386	95	.md	.github	issue-management
+.github/issue-management/rules.mjs	12082	303	.mjs	.github	issue-management
+.github/issue-management/selective-preflight.json	17	1	.json	.github	issue-management
+.github/preview-sizing/README.i18n.yaml	851	22	.yaml	.github	preview-sizing
+.github/preview-sizing/README.md	2632	35	.md	.github	preview-sizing
+.github/preview-sizing/README.zh.md	2383	35	.md	.github	preview-sizing
+.github/pull_request_template.md	986	34	.md	.github	
+.github/review-ownership/.gitignore	13	1	.gitignore	.github	review-ownership
+.github/review-ownership/approval-policy.json	196	12	.json	.github	review-ownership
+.github/review-ownership/author-weight.mjs	2474	62	.mjs	.github	review-ownership
+.github/review-ownership/author-weight.test.mjs	2339	47	.mjs	.github	review-ownership
+.github/review-ownership/blame-ownership.mjs	4562	86	.mjs	.github	review-ownership
+.github/review-ownership/blame-ownership.test.mjs	2654	52	.mjs	.github	review-ownership
+.github/review-ownership/blame-production.py	5949	135	.py	.github	review-ownership
+.github/review-ownership/check-approval.mjs	34938	687	.mjs	.github	review-ownership
+.github/review-ownership/check-approval.test.mjs	61591	1316	.mjs	.github	review-ownership
+.github/review-ownership/README.md	14827	63	.md	.github	review-ownership
+.github/review-ownership/requirements.txt	17	1	.txt	.github	review-ownership
+.github/review-ownership/test_blame_production.py	12094	221	.py	.github	review-ownership
+.github/workflows/build-exe-for-python-sdk.yml	23967	530	.yml	.github	workflows
+.github/workflows/build-exe-for-ssh-helper.yml	4808	127	.yml	.github	workflows
+.github/workflows/build-preview-cloudflare.yml	9044	196	.yml	.github	workflows
+.github/workflows/ci.yml	28051	584	.yml	.github	workflows
+.github/workflows/ci-master.yml	21224	532	.yml	.github	workflows
+.github/workflows/ci-python.yml	3381	87	.yml	.github	workflows
+.github/workflows/ci-windows.yml	13486	270	.yml	.github	workflows
+.github/workflows/cua-helper-package.yml	4215	109	.yml	.github	workflows
+.github/workflows/cua-helper-package-windows.yml	4602	107	.yml	.github	workflows
+.github/workflows/desktop-publish.yml	11260	267	.yml	.github	workflows
+.github/workflows/desktop-rollout.yml	11268	263	.yml	.github	workflows
+.github/workflows/docs-pages.yml	2994	93	.yml	.github	workflows
+.github/workflows/e2e.yml	6108	127	.yml	.github	workflows
+.github/workflows/expected-filenames.yml	696	28	.yml	.github	workflows
+.github/workflows/issue-lifecycle.yml	1617	57	.yml	.github	workflows
+.github/workflows/issue-policy.yml	2279	58	.yml	.github	workflows
+.github/workflows/macos-intel-package.yml	11282	227	.yml	.github	workflows
+.github/workflows/macos-package.yml	11020	224	.yml	.github	workflows
+.github/workflows/node-addon-system.yml	5405	170	.yml	.github	workflows
+.github/workflows/node-addon-system-release.yml	5530	188	.yml	.github	workflows
+.github/workflows/pi-ai-provider-e2e.yml	2549	72	.yml	.github	workflows
+.github/workflows/pr-check-after-approve.yml	2354	62	.yml	.github	workflows
+.github/workflows/pr-check-on-base-branch.yml	950	30	.yml	.github	workflows
+.github/workflows/pr-check-on-head-branch.yml	5938	130	.yml	.github	workflows
+.github/workflows/publish-ssh-helper.yml	3692	101	.yml	.github	workflows
+.github/workflows/python-release.yml	8750	248	.yml	.github	workflows
+.github/workflows/release.yml	7950	190	.yml	.github	workflows
+.github/workflows/release-publish.yml	6816	182	.yml	.github	workflows
+.github/workflows/release-vendor.yml	4162	107	.yml	.github	workflows
+.github/workflows/release-vendor-publish.yml	3988	126	.yml	.github	workflows
+.github/workflows/sandbox.yml	7310	168	.yml	.github	workflows
+.github/workflows/weighted-approval.yml	4328	87	.yml	.github	workflows
+.github/workflows/weighted-approval-review-event.yml	491	18	.yml	.github	workflows
+.github/workflows/windows-package.yml	13901	269	.yml	.github	workflows
+.gitignore	927	55	.gitignore	.	
+.gitlab-ci.yml	8883	191	.yml	.	
+.jscpd.json	351	15	.json	.	
+.oxlintrc.json	12693	358	.json	.	
+.oxlintrc.staged.json	473	22	.json	.	
+.rgignore	102	2	.rgignore	.	
+.ssh/119.29.173.147.pem	1678	27	.pem	.ssh	
+.trae/documents/02-tools-execution-plan.md	7230	53	.md	.trae	documents
+.trae/documents/06-hosts-and-sdks-文档编写计划.md	13101	117	.md	.trae	documents
+.trae/documents/08-infrastructure-doc-plan.md	5258	43	.md	.trae	documents
+.trae/documents/agent-runtime-doc-plan.md	14168	153	.md	.trae	documents
+.trae/documents/consistency-review-plan.md	10133	136	.md	.trae	documents
+.trae/documents/plugin-ecosystem-doc-plan.md	5306	52	.md	.trae	documents
+AGENTS.md	19379	189	.md	.	
+BENCHMARK.md	231	3	.md	.	
+benchmarks/active-stream-reconnect/README.i18n.yaml	429	7	.yaml	benchmarks	active-stream-reconnect
+benchmarks/active-stream-reconnect/README.md	1173	7	.md	benchmarks	active-stream-reconnect
+benchmarks/active-stream-reconnect/README.zh.md	1101	7	.md	benchmarks	active-stream-reconnect
+benchmarks/active-stream-reconnect/reconnect.bench.client.ts	3425	63	.ts	benchmarks	active-stream-reconnect
+benchmarks/active-stream-reconnect/reconnect.worker.client.ts	2666	49	.ts	benchmarks	active-stream-reconnect
+benchmarks/agent-continuation/agent-continuation.bench.ts	11787	238	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/agent-continuation.worker.ts	6321	142	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/child-catalog.worker.ts	5288	116	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/profile-adapter.ts	1874	42	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/profile-continuation.worker.ts	4000	88	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/README.i18n.yaml	871	22	.yaml	benchmarks	agent-continuation
+benchmarks/agent-continuation/README.md	2397	33	.md	benchmarks	agent-continuation
+benchmarks/agent-continuation/README.zh.md	2203	33	.md	benchmarks	agent-continuation
+benchmarks/agent-continuation/synthetic-history.bench.ts	2559	39	.ts	benchmarks	agent-continuation
+benchmarks/agent-continuation/workload.ts	5617	114	.ts	benchmarks	agent-continuation
+benchmarks/AGENTS.md	3709	18	.md	benchmarks	
+benchmarks/conversation-fold/conversation-fold.bench.client.ts	9101	179	.ts	benchmarks	conversation-fold
+benchmarks/conversation-fold/conversation-fold.worker.client.ts	19088	394	.ts	benchmarks	conversation-fold
+benchmarks/long-session-browser/long-session.bench.ts	25551	454	.ts	benchmarks	long-session-browser
+benchmarks/long-session-browser/README.i18n.yaml	595	13	.yaml	benchmarks	long-session-browser
+benchmarks/long-session-browser/README.md	4024	19	.md	benchmarks	long-session-browser
+benchmarks/long-session-browser/README.zh.md	3809	19	.md	benchmarks	long-session-browser
+benchmarks/long-session-browser/synthetic-history.ts	5822	95	.ts	benchmarks	long-session-browser
+benchmarks/package.json	2444	55	.json	benchmarks	
+benchmarks/session-corpus/corpus-shape.ts	3186	76	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/projection-list.bench.ts	6338	99	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/projection-list.worker.ts	15694	315	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/README.i18n.yaml	831	22	.yaml	benchmarks	session-corpus
+benchmarks/session-corpus/README.md	2439	39	.md	benchmarks	session-corpus
+benchmarks/session-corpus/README.zh.md	2393	39	.md	benchmarks	session-corpus
+benchmarks/session-corpus/session-controller.ts	1189	32	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/session-corpus.bench.ts	16888	340	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/session-corpus.worker.ts	17138	402	.ts	benchmarks	session-corpus
+benchmarks/session-corpus/synthetic-corpus.ts	20217	484	.ts	benchmarks	session-corpus
+benchmarks/session-open/session-open.bench.ts	21775	495	.ts	benchmarks	session-open
+benchmarks/session-open/session-open.constants.ts	639	12	.ts	benchmarks	session-open
+benchmarks/session-open/session-open.worker.ts	11710	314	.ts	benchmarks	session-open
+benchmarks/session-open/synthetic-released-v0-session.ts	7075	205	.ts	benchmarks	session-open
+benchmarks/support/built-worker.ts	3953	102	.ts	benchmarks	support
+benchmarks/support/calibration.ts	673	15	.ts	benchmarks	support
+benchmarks/support/machine-profiles.ts	4727	58	.ts	benchmarks	support
+benchmarks/support/scaling-report.ts	17679	308	.ts	benchmarks	support
+benchmarks/terminal-io/session-adapter.ts	168	2	.ts	benchmarks	terminal-io
+benchmarks/terminal-io/terminal-io.bench.ts	5072	88	.ts	benchmarks	terminal-io
+benchmarks/terminal-io/terminal-io.worker.ts	4704	107	.ts	benchmarks	terminal-io
+benchmarks/tsdown.config.ts	2167	76	.ts	benchmarks	
+benchmarks/user-text/user-text.bench.client.ts	10066	195	.ts	benchmarks	user-text
+benchmarks/user-text/user-text.worker.client.ts	19647	416	.ts	benchmarks	user-text
+BRAND_GUIDELINES.i18n.yaml	423	7	.yaml	.	
+BRAND_GUIDELINES.md	1986	12	.md	.	
+BRAND_GUIDELINES.zh.md	1609	12	.md	.	
+CLAUDE.md	9	1	.md	.	
+CONTRIBUTING.i18n.yaml	382	7	.yaml	.	
+CONTRIBUTING.md	1574	23	.md	.	
+CONTRIBUTING.zh.md	1416	23	.md	.	
+lefthook.yml	1780	49	.yml	.	
+LICENSE	1065	21		.	
+Makefile	1198	35		.	
+native/README.i18n.yaml	457	10	.yaml	native	
+native/README.md	996	11	.md	native	
+native/README.zh.md	887	11	.md	native	
+native/system/.gitignore	345	13	.gitignore	native	system
+native/system/AGENTS.md	3184	28	.md	native	system
+native/system/docs/architecture.md	3166	25	.md	native	system
+native/system/docs/cli-contract.md	2552	34	.md	native	system
+native/system/docs/flock-contract.md	3233	36	.md	native	system
+native/system/docs/naming.md	1204	30	.md	native	system
+native/system/docs/packaging.md	2838	26	.md	native	system
+native/system/docs/release.md	4222	63	.md	native	system
+native/system/docs/support-matrix.md	1126	14	.md	native	system
+native/system/LICENSE	1523	28		native	system
+native/system/package.json	1500	34	.json	native	system
+native/system/packages/darwin-arm64/LICENSE	1523	28		native	system
+native/system/packages/darwin-arm64/package.json	647	31	.json	native	system
+native/system/packages/darwin-arm64/prebuilds.json	136	6	.json	native	system
+native/system/packages/darwin-arm64/README.i18n.yaml	485	10	.yaml	native	system
+native/system/packages/darwin-arm64/README.md	477	9	.md	native	system
+native/system/packages/darwin-arm64/README.zh.md	467	9	.md	native	system
+native/system/packages/darwin-x64/LICENSE	1523	28		native	system
+native/system/packages/darwin-x64/package.json	639	31	.json	native	system
+native/system/packages/darwin-x64/prebuilds.json	134	6	.json	native	system
+native/system/packages/darwin-x64/README.i18n.yaml	481	10	.yaml	native	system
+native/system/packages/darwin-x64/README.md	471	9	.md	native	system
+native/system/packages/darwin-x64/README.zh.md	473	9	.md	native	system
+native/system/packages/entry/package.json	1247	46	.json	native	system
+native/system/packages/entry/README.i18n.yaml	465	10	.yaml	native	system
+native/system/packages/entry/README.md	1639	15	.md	native	system
+native/system/packages/entry/README.zh.md	1577	15	.md	native	system
+native/system/packages/entry/src/flock.c	5744	164	.c	native	system
+native/system/packages/entry/src/flock.ts	2376	57	.ts	native	system
+native/system/packages/entry/src/index.ts	6093	127	.ts	native	system
+native/system/packages/entry/src/main.c	11757	298	.c	native	system
+native/system/packages/entry/tsconfig.json	235	11	.json	native	system
+native/system/packages/linux-arm64/LICENSE	1523	28		native	system
+native/system/packages/linux-arm64/package.json	681	31	.json	native	system
+native/system/packages/linux-arm64/prebuilds.json	435	24	.json	native	system
+native/system/packages/linux-arm64/README.i18n.yaml	483	10	.yaml	native	system
+native/system/packages/linux-arm64/README.md	781	11	.md	native	system
+native/system/packages/linux-arm64/README.zh.md	746	11	.md	native	system
+native/system/packages/linux-x64/LICENSE	1523	28		native	system
+native/system/packages/linux-x64/package.json	673	31	.json	native	system
+native/system/packages/linux-x64/prebuilds.json	433	24	.json	native	system
+native/system/packages/linux-x64/README.i18n.yaml	479	10	.yaml	native	system
+native/system/packages/linux-x64/README.md	777	11	.md	native	system
+native/system/packages/linux-x64/README.zh.md	712	11	.md	native	system
+native/system/README.i18n.yaml	989	28	.yaml	native	system
+native/system/README.md	2500	41	.md	native	system
+native/system/README.zh.md	2404	41	.md	native	system
+native/system/scripts/assemble-prebuilds.mjs	2180	54	.mjs	native	system
+native/system/scripts/build.ts	4298	92	.ts	native	system
+native/system/scripts/build-test-oracle.mjs	1244	23	.mjs	native	system
+native/system/scripts/bump-release.mjs	2890	91	.mjs	native	system
+native/system/scripts/commit-release.mjs	1181	42	.mjs	native	system
+native/system/scripts/github-matrix.mjs	2084	69	.mjs	native	system
+native/system/scripts/pack-release.mjs	5356	118	.mjs	native	system
+native/system/scripts/publish-release.mjs	7046	165	.mjs	native	system
+native/system/scripts/repo.mjs	5784	122	.mjs	native	system
+native/system/scripts/verify-entry-lib.mjs	1141	28	.mjs	native	system
+native/system/scripts/verify-launcher-binary.mjs	1409	30	.mjs	native	system
+native/system/scripts/verify-packed-install.mjs	10861	238	.mjs	native	system
+native/system/scripts/verify-release.mjs	1889	54	.mjs	native	system
+native/system/test/entry.test.js	3334	80	.js	native	system
+native/system/test/fixtures/flock-binding.js	625	12	.js	native	system
+native/system/test/fixtures/flock-callback-throws.js	275	6	.js	native	system
+native/system/test/fixtures/flock-child.js	1236	42	.js	native	system
+native/system/test/fixtures/flock-import.js	894	22	.js	native	system
+native/system/test/fixtures/flock-inherited-child.js	1053	37	.js	native	system
+native/system/test/fixtures/flock-io-child.js	684	19	.js	native	system
+native/system/test/fixtures/flock-oracle.c	1909	75	.c	native	system
+native/system/test/fixtures/flock-worker.js	1100	31	.js	native	system
+native/system/test/flock.test.js	17053	423	.js	native	system
+native/system/test/launcher.test.js	5955	137	.js	native	system
+native/system/test/link-platform.mjs	530	10	.mjs	native	system
+native/system/test/package-matrix.test.js	8718	186	.js	native	system
+native/system/test/release-packing.test.js	8223	151	.js	native	system
+native/system/tsconfig.base.json	214	11	.json	native	system
+native/system/tsconfig.json	194	11	.json	native	system
+package.json	20176	314	.json	.	
+patches/@botiverse__oar@0.67.0.patch	9267	163	.patch	patches	
+patches/@earendil-works__pi-ai@1.3.0.patch	5632	100	.patch	patches	
+patches/@electron__osx-sign@1.3.3.patch	1403	26	.patch	patches	
+patches/@fortune-sheet__core@1.0.4.patch	3658	76	.patch	patches	
+patches/@fortune-sheet__react@1.0.4.patch	6722	138	.patch	patches	
+patches/@yao-pkg__pkg@6.21.0.patch	402321	165	.patch	patches	
+patches/app-builder-lib@26.17.0.patch	1224	27	.patch	patches	
+patches/exceljs@4.4.0.patch	35056	806	.patch	patches	
+patches/lexical@0.49.0.patch	647960	58	.patch	patches	
+patches/mdast-util-gfm-autolink-literal@2.0.1.patch	689	14	.patch	patches	
+patches/micromark-extension-gfm-autolink-literal@2.1.0.patch	5778	198	.patch	patches	
+patches/node-pty@1.2.0-beta.15.patch	2110	45	.patch	patches	
+pnpm-lock.yaml	1219598	34860	.yaml	.	
+pnpm-workspace.yaml	6514	124	.yaml	.	
+pytest.ini	219	5	.ini	.	
+python/development.i18n.yaml	902	22	.yaml	python	
+python/development.md	10487	106	.md	python	
+python/development.zh.md	10021	106	.md	python	
+python/README.i18n.yaml	660	16	.yaml	python	
+python/README.md	1319	20	.md	python	
+python/README.zh.md	1273	20	.md	python	
+python/sdk/examples/compact.py	2004	54	.py	python	sdk
+python/sdk/examples/goal.py	2897	65	.py	python	sdk
+python/sdk/examples/manage_plugins.py	2637	55	.py	python	sdk
+python/sdk/examples/minimal.py	1740	50	.py	python	sdk
+python/sdk/examples/permission.py	1853	45	.py	python	sdk
+python/sdk/examples/plan.py	7331	173	.py	python	sdk
+python/sdk/examples/README.i18n.yaml	1021	28	.yaml	python	sdk
+python/sdk/examples/README.md	8085	115	.md	python	sdk
+python/sdk/examples/README.zh.md	7651	115	.md	python	sdk
+python/sdk/pyproject.toml	1200	39	.toml	python	sdk
+python/sdk/README.i18n.yaml	1076	28	.yaml	python	sdk
+python/sdk/README.md	17450	152	.md	python	sdk
+python/sdk/README.zh.md	16293	152	.md	python	sdk
+python/sdk/src/deepseek_harness/__init__.py	839	28	.py	python	sdk
+python/sdk/src/deepseek_harness/api.py	14436	335	.py	python	sdk
+python/sdk/src/deepseek_harness/client.py	30063	735	.py	python	sdk
+python/sdk/src/deepseek_harness/errors.py	660	23	.py	python	sdk
+python/sdk/src/deepseek_harness/models.py	3064	107	.py	python	sdk
+python/sdk/src/deepseek_harness/office.py	8207	219	.py	python	sdk
+python/sdk/tests/expected/account-provider-signout.json	204	11	.json	python	sdk
+python/sdk/tests/expected/cot-translation-projection.json	2913	106	.json	python	sdk
+python/sdk/tests/expected/team-mode-projection.json	763	48	.json	python	sdk
+python/sdk/tests/fixtures/office_cli.py	2016	48	.py	python	sdk
+python/sdk/tests/manual_sdk_agent_smoke.py	4898	130	.py	python	sdk
+python/sdk/tests/manual_sdk_shutdown_smoke.py	1315	36	.py	python	sdk
+python/sdk/tests/run_installed_commands.py	2346	69	.py	python	sdk
+python/sdk/tests/test_account_provider_snapshot.py	1318	35	.py	python	sdk
+python/sdk/tests/test_approval.py	2580	55	.py	python	sdk
+python/sdk/tests/test_approval_runtime.py	2695	52	.py	python	sdk
+python/sdk/tests/test_bundled_runtime.py	3752	106	.py	python	sdk
+python/sdk/tests/test_client.py	51376	1203	.py	python	sdk
+python/sdk/tests/test_command_attachments_runtime.py	15371	285	.py	python	sdk
+python/sdk/tests/test_commands_runtime.py	32730	671	.py	python	sdk
+python/sdk/tests/test_cot_translation_projection.py	4232	83	.py	python	sdk
+python/sdk/tests/test_goal_example.py	6355	138	.py	python	sdk
+python/sdk/tests/test_goal_result_text_runtime.py	1594	29	.py	python	sdk
+python/sdk/tests/test_goal_runtime.py	9749	173	.py	python	sdk
+python/sdk/tests/test_macos_deployment_target.py	2002	66	.py	python	sdk
+python/sdk/tests/test_office.py	4990	101	.py	python	sdk
+python/sdk/tests/test_office_interrupts.py	4410	106	.py	python	sdk
+python/sdk/tests/test_office_render.py	5339	126	.py	python	sdk
+python/sdk/tests/test_plan_example.py	3973	82	.py	python	sdk
+python/sdk/tests/test_plan_input.py	13594	323	.py	python	sdk
+python/sdk/tests/test_plan_input_posix.py	2214	53	.py	python	sdk
+python/sdk/tests/test_plan_runtime.py	14769	264	.py	python	sdk
+python/sdk/tests/test_release_version.py	8824	199	.py	python	sdk
+python/sdk/tests/test_resume.py	1935	58	.py	python	sdk
+python/sdk/tests/test_run.py	21929	454	.py	python	sdk
+python/sdk/tests/test_runtime_resolution.py	20076	419	.py	python	sdk
+python/sdk/tests/test_smoke_model.py	33750	785	.py	python	sdk
+python/sdk/tests/test_user_questions.py	9841	242	.py	python	sdk
+python/sdk/tests/test_working_directory.py	2080	54	.py	python	sdk
+python/sdk-runtime/hatch_build.py	4587	108	.py	python	sdk-runtime
+python/sdk-runtime/package.json	8686	168	.json	python	sdk-runtime
+python/sdk-runtime/platforms.json	578	22	.json	python	sdk-runtime
+python/sdk-runtime/pyproject.toml	1458	41	.toml	python	sdk-runtime
+python/sdk-runtime/README.i18n.yaml	815	19	.yaml	python	sdk-runtime
+python/sdk-runtime/README.md	10938	69	.md	python	sdk-runtime
+python/sdk-runtime/README.zh.md	9862	69	.md	python	sdk-runtime
+python/sdk-runtime/runtime-bootstrap.mjs	6027	112	.mjs	python	sdk-runtime
+python/sdk-runtime/src/deepseek_harness_runtime/__init__.py	9344	222	.py	python	sdk-runtime
+python/sdk-runtime/src/deepseek_harness_runtime/_resources.py	6168	116	.py	python	sdk-runtime
+python/sdk-runtime/src/deepseek_harness_runtime/deepseek-harness-runtime.json	62	1	.json	python	sdk-runtime
+README.i18n.yaml	890	31	.yaml	.	
+README.md	1923	61	.md	.	
+README.zh.md	1740	61	.md	.	
+SAFETY.i18n.yaml	665	19	.yaml	.	
+SAFETY.md	1673	27	.md	.	
+SAFETY.zh.md	1530	27	.md	.	
+scripts/agent-note-tree.ts	3848	83	.ts	scripts	
+scripts/AGENTS.md	834	5	.md	scripts	
+scripts/archived-agent-notes.spec.ts	7622	153	.ts	scripts	
+scripts/archived-agent-notes.ts	8928	204	.ts	scripts	
+scripts/attribute-chunk-bytes.mjs	4072		.mjs	scripts	
+scripts/benchmark-next-package-dependency.spec.ts	4428	125	.ts	scripts	
+scripts/benchmark-next-package-dependency.ts	11113	271	.ts	scripts	
+scripts/benchmark-npm-resolution.spec.ts	7942	200	.ts	scripts	
+scripts/benchmark-npm-resolution.ts	21511	553	.ts	scripts	
+scripts/brand/render-icons.mjs	19619	490	.mjs	scripts	brand
+scripts/browser-bundled-externals.spec.ts	8539	174	.ts	scripts	
+scripts/browser-bundled-externals.ts	8300	183	.ts	scripts	
+scripts/build.spec.ts	5849	129	.ts	scripts	
+scripts/build.ts	8977	194	.ts	scripts	
+scripts/build-exe-for-python-sdk.spec.ts	9046	206	.ts	scripts	
+scripts/build-exe-for-python-sdk.ts	28278	630	.ts	scripts	
+scripts/build-exe-for-python-sdk-assets.spec.ts	1289	32	.ts	scripts	
+scripts/build-exe-for-python-sdk-native-pty.spec.ts	2485	67	.ts	scripts	
+scripts/build-exe-for-python-sdk-office.spec.ts	8191	148	.ts	scripts	
+scripts/build-exe-for-python-sdk-office.ts	3573	63	.ts	scripts	
+scripts/build-exe-for-python-sdk-resources.spec.ts	2711	47	.ts	scripts	
+scripts/build-exe-for-python-sdk-resources.ts	887	17	.ts	scripts	
+scripts/build-exe-for-python-sdk-staging.spec.ts	6344	122	.ts	scripts	
+scripts/build-exe-for-python-sdk-staging.ts	5010	103	.ts	scripts	
+scripts/build-exe-for-ssh-helper.ts	11151	176	.ts	scripts	
+scripts/build-python-release.py	13301	295	.py	scripts	
+scripts/bundle-input-isolation.ts	4056	96	.ts	scripts	
+scripts/change-scope.spec.ts	9427	241	.ts	scripts	
+scripts/change-scope.ts	7641	248	.ts	scripts	
+scripts/check-expected-filenames.sh	810	26	.sh	scripts	
+scripts/check-macos-deployment-target.py	4285	111	.py	scripts	
+scripts/check-vendor-manifest.sh	781	17	.sh	scripts	
+scripts/check-workspace-constraints.spec.ts	35670	664	.ts	scripts	
+scripts/check-workspace-constraints.ts	38708	742	.ts	scripts	
+scripts/ci-compatible-selfhosted.spec.ts	9842	193	.ts	scripts	
+scripts/ci-compatible-toolcache.mjs	448	8	.mjs	scripts	
+scripts/ci-workflow.spec.ts	105044	1852	.ts	scripts	
+scripts/clean.spec.ts	6204	139	.ts	scripts	
+scripts/clean.ts	10070	244	.ts	scripts	
+scripts/client-asset-types.spec.ts	1593	32	.ts	scripts	
+scripts/client-build-environment.client.spec.ts	14519	343	.ts	scripts	
+scripts/client-build-environment.ts	17567	413	.ts	scripts	
+scripts/client-bundle-css.spec.ts	26341	547	.ts	scripts	
+scripts/client-bundle-purity.spec.ts	33346	654	.ts	scripts	
+scripts/client-tsconfig.spec.ts	1531	38	.ts	scripts	
+scripts/command-entrypoints.compat.spec.ts	964	24	.ts	scripts	
+scripts/compile-referenced-projects.spec.ts	18061	419	.ts	scripts	
+scripts/compile-referenced-projects.ts	12298	269	.ts	scripts	
+scripts/cordis-config-access.spec.ts	3658	92	.ts	scripts	
+scripts/cordis-config-files.spec.ts	1336	36	.ts	scripts	
+scripts/cordis-config-files.ts	582	18	.ts	scripts	
+scripts/cordis-core-api.spec.ts	2225	49	.ts	scripts	
+scripts/cordis-core-api.ts	18919	433	.ts	scripts	
+scripts/cordis-core-lifecycle.spec.ts	7045	188	.ts	scripts	
+scripts/cordis-entry-commit.spec.ts	5399	119	.ts	scripts	
+scripts/cordis-include-journal.spec.ts	10011	204	.ts	scripts	
+scripts/cordis-loader-resolve.spec.ts	5001	104	.ts	scripts	
+scripts/cordis-timer.spec.ts	4074	101	.ts	scripts	
+scripts/cordis-vendor-hmr-include.spec.ts	2359	44	.ts	scripts	
+scripts/cordis-walk.ts	4743	102	.ts	scripts	
+scripts/cordis-yaml.ts	3149	78	.ts	scripts	
+scripts/coverage-canonical-locations.ts	4102	94	.ts	scripts	
+scripts/coverage-exempt.spec.ts	2481	62	.ts	scripts	
+scripts/coverage-exempt.ts	3512	64	.ts	scripts	
+scripts/coverage-file-times.spec.ts	2843	70	.ts	scripts	
+scripts/coverage-file-times.ts	1971	43	.ts	scripts	
+scripts/coverage-fork-diagnostics.spec.ts	14716	335	.ts	scripts	
+scripts/coverage-fork-diagnostics.ts	3498	85	.ts	scripts	
+scripts/coverage-partitions.spec.ts	32346	777	.ts	scripts	
+scripts/coverage-partitions.ts	33100	756	.ts	scripts	
+scripts/coverage-uncovered-locations.cjs	4566	121	.cjs	scripts	
+scripts/cua-helper/build-inputs.spec.ts	17699	295	.ts	scripts	cua-helper
+scripts/cua-helper/build-inputs.ts	10011	169	.ts	scripts	cua-helper
+scripts/cua-helper/package.spec.ts	6678	115	.ts	scripts	cua-helper
+scripts/cua-helper/package.ts	7054	108	.ts	scripts	cua-helper
+scripts/cua-helper/payload.spec.ts	8819	140	.ts	scripts	cua-helper
+scripts/cua-helper/payload.ts	7126	123	.ts	scripts	cua-helper
+scripts/cua-helper/select-artifact.spec.ts	16831	290	.ts	scripts	cua-helper
+scripts/cua-helper/select-artifact.ts	12269	210	.ts	scripts	cua-helper
+scripts/cua-helper/smoke.py	4909	107	.py	scripts	cua-helper
+scripts/cua-helper/smoke.spec.ts	649	13	.ts	scripts	cua-helper
+scripts/cua-helper/stage.ts	864	13	.ts	scripts	cua-helper
+scripts/cua-helper/test_smoke.py	4998	93	.py	scripts	cua-helper
+scripts/cua-helper/verify-tarball.ts	1226	24	.ts	scripts	cua-helper
+scripts/cua-macos-signing.spec.ts	602	11	.ts	scripts	
+scripts/demo-ptc.mjs	575	19	.mjs	scripts	
+scripts/dependency-catalog/package-lock.json	344527	8539	.json	scripts	dependency-catalog
+scripts/dependency-catalog/resolution.json	208	9	.json	scripts	dependency-catalog
+scripts/desktop-archive-workflow-test.ts	1483	28	.ts	scripts	
+scripts/desktop-package-forms.spec.ts	1218	23	.ts	scripts	
+scripts/desktop-package-source.spec.ts	3832	61	.ts	scripts	
+scripts/desktop-publish-workflow.spec.ts	6376	103	.ts	scripts	
+scripts/dev-bundle-registry.ts	7432	173	.ts	scripts	
+scripts/dev-web.spec.ts	9381	220	.ts	scripts	
+scripts/dev-web.ts	19639	440	.ts	scripts	
+scripts/doc-budgets.manifest.json	199	9	.json	scripts	
+scripts/doc-standard.spec.ts	25783	463	.ts	scripts	
+scripts/doc-typecheck.ts	10699	255	.ts	scripts	
+scripts/doc-typecheck-paths.spec.ts	1794	35	.ts	scripts	
+scripts/doc-typecheck-paths.ts	1860	37	.ts	scripts	
+scripts/executable-native-pty.ts	1597	45	.ts	scripts	
+scripts/executable-packaging.spec.ts	3680	64	.ts	scripts	
+scripts/executable-packaging.ts	3629	82	.ts	scripts	
+scripts/experimental-package-policy.spec.ts	1989	38	.ts	scripts	
+scripts/experimental-package-policy.ts	6871	127	.ts	scripts	
+scripts/fixture-file.ts	663	15	.ts	scripts	
+scripts/fixtures/coverage-fork.config.ts	669	18	.ts	scripts	fixtures
+scripts/fixtures/coverage-fork.fixture.ts	448	15	.ts	scripts	fixtures
+scripts/fixtures/coverage-fork-exit.cjs	147	2	.cjs	scripts	fixtures
+scripts/fixtures/lane-test-budget.fixture.ts	1218	32	.ts	scripts	fixtures
+scripts/fixtures/office-render.py	5559	118	.py	scripts	fixtures
+scripts/fixtures/office-render/color-blocks.docx	1082		.docx	scripts	fixtures
+scripts/fixtures/office-render/color-blocks.pptx	1787		.pptx	scripts	fixtures
+scripts/fixtures/office-render/color-blocks.xlsx	2202		.xlsx	scripts	fixtures
+scripts/fixtures/python-sdk-authoring-clock.mjs	272	8	.mjs	scripts	fixtures
+scripts/fixtures/python-sdk-dynamic-tools.mjs	1101	28	.mjs	scripts	fixtures
+scripts/fixtures/python-sdk-in-history-prompt.mjs	677	18	.mjs	scripts	fixtures
+scripts/fixtures/python-sdk-office.mjs	1436	25	.mjs	scripts	fixtures
+scripts/fixtures/python-snapshot-image-offload.mjs	1591	43	.mjs	scripts	fixtures
+scripts/fixtures/python-snapshot-tool.mjs	1708	45	.mjs	scripts	fixtures
+scripts/fixtures/python-snapshot-workflow-order.mjs	2809	64	.mjs	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/agent-note.md	256	17	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/agent-note.zh.md	224	17	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/product.md	455	22	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/product.zh.md	460	22	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/rules.md	353	15	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/examples/rules.zh.md	314	15	.md	scripts	fixtures
+scripts/fixtures/translation-prompt/response.txt	237	23	.txt	scripts	fixtures
+scripts/fixtures/translation-prompt/snapshot-note.md	67	7	.md	scripts	fixtures
+scripts/gen-client-catalog.spec.ts	12547	268	.ts	scripts	
+scripts/gen-client-catalog.ts	30511	614	.ts	scripts	
+scripts/gen-cli-help.spec.ts	6898	155	.ts	scripts	
+scripts/gen-cli-help.ts	13668	315	.ts	scripts	
+scripts/gen-config-catalog.spec.ts	14096	303	.ts	scripts	
+scripts/gen-config-catalog.ts	55080	1123	.ts	scripts	
+scripts/gen-cordis-api.ts	293	9	.ts	scripts	
+scripts/gen-cordis-catalog.ts	76240	1480	.ts	scripts	
+scripts/gen-cordis-catalog-partition.spec.ts	9163	211	.ts	scripts	
+scripts/gen-cordis-inspect-catalog.ts	4210	91	.ts	scripts	
+scripts/gen-dependency-catalog.spec.ts	10244	188	.ts	scripts	
+scripts/gen-dependency-catalog.ts	13337	304	.ts	scripts	
+scripts/gen-doc-graphs.spec.ts	7266	165	.ts	scripts	
+scripts/gen-doc-graphs.ts	88099	1941	.ts	scripts	
+scripts/generate-typert.spec.ts	9862	195	.ts	scripts	
+scripts/generate-typert.ts	6315	132	.ts	scripts	
+scripts/gen-module-graph.ts	7508	191	.ts	scripts	
+scripts/gen-official-bundle-catalog.spec.ts	8515	148	.ts	scripts	
+scripts/gen-official-bundle-catalog.ts	8161	137	.ts	scripts	
+scripts/gen-persistence-catalog.ts	12750	267	.ts	scripts	
+scripts/gen-plugin-packages.ts	3497	83	.ts	scripts	
+scripts/gen-session-format-catalog.spec.ts	7245	167	.ts	scripts	
+scripts/gen-session-format-catalog.ts	12246	261	.ts	scripts	
+scripts/gen-third-party-notices.spec.ts	24032	511	.ts	scripts	
+scripts/gen-third-party-notices.ts	44513	884	.ts	scripts	
+scripts/gen-tool-catalog.ts	51414	981	.ts	scripts	
+scripts/gen-translation-brief.ts	13661	331	.ts	scripts	
+scripts/gen-tsconfig-paths.spec.ts	4023	96	.ts	scripts	
+scripts/gen-tsconfig-paths.ts	9612	239	.ts	scripts	
+scripts/gen-workflow-guest.spec.ts	2459	43	.ts	scripts	
+scripts/gen-workflow-guest.ts	3024	72	.ts	scripts	
+scripts/historical-schema-region.ts	1104	17	.ts	scripts	
+scripts/install-lefthook.mjs	28528	769	.mjs	scripts	
+scripts/install-lefthook.spec.ts	41712	882	.ts	scripts	
+scripts/jsdoc.ts	8438	201	.ts	scripts	
+scripts/lane-test-budget.spec.ts	5942	122	.ts	scripts	
+scripts/libreoffice-engine.spec.ts	1141	24	.ts	scripts	
+scripts/libreoffice-packages.d.mts	838	17	.mts	scripts	
+scripts/libreoffice-packages.mjs	4010	80	.mjs	scripts	
+scripts/lint-rule-fingerprint.spec.ts	3589	98	.ts	scripts	
+scripts/loader-config-diff.spec.ts	5921	109	.ts	scripts	
+scripts/loader-volatile-update.spec.ts	32092	636	.ts	scripts	
+scripts/local-bundle-registry.spec.ts	29450	559	.ts	scripts	
+scripts/local-bundle-registry.ts	37874	929	.ts	scripts	
+scripts/locale-dictionary-parity.spec.ts	19331	407	.ts	scripts	
+scripts/macos-package-workflow.spec.ts	7155	114	.ts	scripts	
+scripts/markdown.spec.ts	1175	38	.ts	scripts	
+scripts/markdown.ts	10882	277	.ts	scripts	
+scripts/migrate-packed-session-fixtures.ts	869	21	.ts	scripts	
+scripts/migrate-sessions-to-v4.spec.ts	22959	450	.ts	scripts	
+scripts/migrate-sessions-to-v4.ts	14029	303	.ts	scripts	
+scripts/migration-failure-summary.spec.ts	2633	45	.ts	scripts	
+scripts/migration-failure-summary.ts	2267	43	.ts	scripts	
+scripts/no-unknown-casts.baseline.json	106682	1957	.json	scripts	
+scripts/npm-baseline-packages.spec.ts	2798	73	.ts	scripts	
+scripts/npm-baseline-packages.ts	1014	26	.ts	scripts	
+scripts/npm-platform.ts	941	21	.ts	scripts	
+scripts/optional-bundles.spec.ts	15228	286	.ts	scripts	
+scripts/oxlint-contract.spec.ts	20847	503	.ts	scripts	
+scripts/package-dependency-policy.ts	7506	139	.ts	scripts	
+scripts/package-graph.spec.ts	2991	72	.ts	scripts	
+scripts/package-graph.ts	6563	168	.ts	scripts	
+scripts/package-source-uses.worker.ts	1701	44	.ts	scripts	
+scripts/paired-markdown-derivatives.spec.ts	2436	66	.ts	scripts	
+scripts/paired-markdown-derivatives.ts	2369	63	.ts	scripts	
+scripts/parallelism.spec.ts	1074	23	.ts	scripts	
+scripts/parallelism.ts	2055	44	.ts	scripts	
+scripts/persistence-artifacts.ts	2823	55	.ts	scripts	
+scripts/persistence-catalog-source.ts	15329	311	.ts	scripts	
+scripts/persistence-catalog-text.ts	8813	63	.ts	scripts	
+scripts/persistence-changes.spec.ts	71101	1133	.ts	scripts	
+scripts/persistence-changes.ts	55780	935	.ts	scripts	
+scripts/persistence-developer.spec.ts	4812	68	.ts	scripts	
+scripts/persistence-epoch-header.spec.ts	2773	49	.ts	scripts	
+scripts/persistence-finalization.ts	9973	168	.ts	scripts	
+scripts/persistence-format-facts.ts	4725	78	.ts	scripts	
+scripts/persistence-formats.spec.ts	29452	484	.ts	scripts	
+scripts/persistence-formats.ts	13457	230	.ts	scripts	
+scripts/persistence-release-facts.ts	5825	95	.ts	scripts	
+scripts/persistence-releases.spec.ts	21989	400	.ts	scripts	
+scripts/persistence-releases.ts	14644	257	.ts	scripts	
+scripts/persistence-review.spec.ts	8611	136	.ts	scripts	
+scripts/persistence-review.ts	13629	230	.ts	scripts	
+scripts/persistence-schema.spec.ts	34377	549	.ts	scripts	
+scripts/persistence-schema.ts	26152	512	.ts	scripts	
+scripts/persistence-schema-model.spec.ts	6654	109	.ts	scripts	
+scripts/persistence-schema-model.ts	17259	378	.ts	scripts	
+scripts/persistence-schema-snapshot.spec.ts	8081	133	.ts	scripts	
+scripts/persistence-source-annotations.ts	4896	81	.ts	scripts	
+scripts/persistence-source-metadata.ts	729	18	.ts	scripts	
+scripts/persistence-source-policy.ts	3656	69	.ts	scripts	
+scripts/pkg-sea-compression.spec.ts	3767	94	.ts	scripts	
+scripts/plugin-entry-existing-exports.ts	17748	259	.ts	scripts	
+scripts/plugin-preview-assets.spec.ts	3761	67	.ts	scripts	
+scripts/plugin-record-catalog.spec.ts	12659	230	.ts	scripts	
+scripts/plugin-record-catalog.ts	6915	133	.ts	scripts	
+scripts/pnpm-invocation.spec.ts	1124	33	.ts	scripts	
+scripts/pnpm-invocation.ts	925	21	.ts	scripts	
+scripts/pre-merge-check.spec.ts	3669	72	.ts	scripts	
+scripts/pre-merge-check.ts	6121	140	.ts	scripts	
+scripts/prepare-ci-bubblewrap.sh	1739	34	.sh	scripts	
+scripts/prepare-linux-node-pty.sh	983	23	.sh	scripts	
+scripts/preview-workflow.spec.ts	5012	83	.ts	scripts	
+scripts/primary-runtime/lock.json	10216	180	.json	scripts	primary-runtime
+scripts/primary-runtime/prepare.spec.ts	11078	187	.ts	scripts	primary-runtime
+scripts/primary-runtime/prepare.ts	16553	298	.ts	scripts	primary-runtime
+scripts/primary-runtime/prune-python-tests.spec.ts	4674	85	.ts	scripts	primary-runtime
+scripts/primary-runtime/prune-python-tests.ts	1890	41	.ts	scripts	primary-runtime
+scripts/primary-runtime/smoke.py	6153	127	.py	scripts	primary-runtime
+scripts/product-package-policy.ts	4950	51	.ts	scripts	
+scripts/project-doc-site.spec.ts	36541	855	.ts	scripts	
+scripts/project-doc-site.ts	24096	577	.ts	scripts	
+scripts/project-reference-faces.spec.ts	4676	100	.ts	scripts	
+scripts/project-reference-faces.ts	5243	129	.ts	scripts	
+scripts/publication-payload.spec.ts	749	18	.ts	scripts	
+scripts/publication-payload.ts	967	17	.ts	scripts	
+scripts/publint-all.spec.ts	8031	183	.ts	scripts	
+scripts/publint-all.ts	8735	245	.ts	scripts	
+scripts/publint-browser-format.ts	822	16	.ts	scripts	
+scripts/publish-npm-baseline.ts	37738	1070	.ts	scripts	
+scripts/python-runtime-deploy.pnpmfile.d.mts	586	15	.mts	scripts	
+scripts/python-runtime-deploy.pnpmfile.mjs	1256	25	.mjs	scripts	
+scripts/python-runtime-deploy.spec.ts	1263	35	.ts	scripts	
+scripts/python-runtime-download.spec.ts	11491	198	.ts	scripts	
+scripts/python-snapshot-workflow-order.spec.ts	9324	191	.ts	scripts	
+scripts/release/bump.ts	17249	416	.ts	scripts	release
+scripts/release/families.spec.ts	25977	522	.ts	scripts	release
+scripts/release/families.ts	21289	504	.ts	scripts	release
+scripts/release/installed-product-isolation.spec.ts	4898	108	.ts	scripts	release
+scripts/release/installed-product-isolation.ts	3521	73	.ts	scripts	release
+scripts/release/pack.spec.ts	17207	377	.ts	scripts	release
+scripts/release/pack.ts	5654	123	.ts	scripts	release
+scripts/release/process.spec.ts	2358	51	.ts	scripts	release
+scripts/release/process.ts	5720	129	.ts	scripts	release
+scripts/release/publish.spec.ts	13861	331	.ts	scripts	release
+scripts/release/publish.ts	11086	242	.ts	scripts	release
+scripts/release/tarball.ts	2492	63	.ts	scripts	release
+scripts/release/verify.ts	5244	117	.ts	scripts	release
+scripts/release/verify-packed-install.spec.ts	5584	99	.ts	scripts	release
+scripts/release/verify-packed-install.ts	7129	134	.ts	scripts	release
+scripts/render-persistence-schema.spec.ts	19844	349	.ts	scripts	
+scripts/render-persistence-schema.ts	15923	319	.ts	scripts	
+scripts/repo-files.spec.ts	12257	265	.ts	scripts	
+scripts/repo-files.ts	13284	295	.ts	scripts	
+scripts/request-input-types.spec.ts	6373	112	.ts	scripts	
+scripts/rescope-vendor.spec.ts	13916	228	.ts	scripts	
+scripts/rescope-vendor.ts	42193	773	.ts	scripts	
+scripts/run-bench-suite.ts	2586	70	.ts	scripts	
+scripts/run-ci-bench.ts	1165	28	.ts	scripts	
+scripts/run-coverage-partitions.ts	887	25	.ts	scripts	
+scripts/run-gates.spec.ts	64483	1463	.ts	scripts	
+scripts/run-gates.ts	77190	1762	.ts	scripts	
+scripts/run-memory-pressure-bench.spec.ts	1657	44	.ts	scripts	
+scripts/run-memory-pressure-bench.ts	6809	147	.ts	scripts	
+scripts/run-oxlint.spec.ts	2173	55	.ts	scripts	
+scripts/run-oxlint.ts	4127	112	.ts	scripts	
+scripts/run-web-snapshots.ts	1688	46	.ts	scripts	
+scripts/session-fixture-layout.spec.ts	10691	236	.ts	scripts	
+scripts/session-fixture-layout.ts	12346	294	.ts	scripts	
+scripts/session-query-spill-command.spec.ts	3384	67	.ts	scripts	
+scripts/session-snapshot-corpus.corpus.ts	10185	216	.ts	scripts	
+scripts/session-snapshot-corpus-policy.spec.ts	7337	146	.ts	scripts	
+scripts/session-snapshot-corpus-policy.ts	5098	114	.ts	scripts	
+scripts/shipped-locales.spec.ts	2462	44	.ts	scripts	
+scripts/shipped-locales.ts	1027	23	.ts	scripts	
+scripts/slot-walk.ts	18185	432	.ts	scripts	
+scripts/smoke-python-runtime.py	158356	3279	.py	scripts	
+scripts/snapshot-http-fixtures.spec.ts	7347	203	.ts	scripts	
+scripts/snapshots/python-sdk-single-exe/advanced/result.json	127650	4936	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.1.v2.jsonl	4623	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.1.v3.jsonl	5567	22	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.1.v4.jsonl	8394	30	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.2.v2.jsonl	4606	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.2.v3.jsonl	5550	22	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.2.v4.jsonl	7249	30	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.v2.jsonl	21398	67	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.v3.jsonl	21150	72	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced/session.v4.jsonl	18927	67	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced-ptc/result.json	58501	2310	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/advanced-ptc/session.v4.jsonl	13139	50	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/authoring/model-visible.json	3424	35	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/authoring/win-x64/model-visible.json	3761	35	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/dynamic-tools/tool-history.json	6015	269	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/minimal/model-visible.json	9015	254	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/minimal/win-x64/model-visible.json	8850	254	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/minimal-in-history/prompt-history.json	963	31	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/requests.json	2038	60	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/result.json	1797	80	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/resume.json	536	26	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.1.v2.jsonl	3669	17	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.1.v3.jsonl	4038	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.1.v4.jsonl	4120	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.2.v2.jsonl	3672	17	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.2.v3.jsonl	4041	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/restart/session.2.v4.jsonl	4123	18	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/scheduler-recovery/requests.json	3755	109	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/scheduler-recovery/result.json	1664	78	.json	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/scheduler-recovery/session.v3.jsonl	9242	31	.jsonl	scripts	snapshots
+scripts/snapshots/python-sdk-single-exe/scheduler-recovery/session.v4.jsonl	9219	31	.jsonl	scripts	snapshots
+scripts/snapshots/translation-prompt-v4/request-response.expected.json	38323	44	.json	scripts	snapshots
+scripts/snapshot-shell-path.spec.ts	2059	42	.ts	scripts	
+scripts/snapshot-shell-path.ts	1181	30	.ts	scripts	
+scripts/snapshot-spill-locators.spec.ts	3896	72	.ts	scripts	
+scripts/snapshot-spill-locators.ts	2790	66	.ts	scripts	
+scripts/snapshot-workspace-parent.spec.ts	4027	78	.ts	scripts	
+scripts/snapshot-workspace-parent.ts	2210	46	.ts	scripts	
+scripts/source-parse-uses.ts	9964	225	.ts	scripts	
+scripts/ssh-helper/artifact.spec.ts	6952	117	.ts	scripts	ssh-helper
+scripts/ssh-helper/artifact.ts	4359	88	.ts	scripts	ssh-helper
+scripts/ssh-helper/native.ts	3768	74	.ts	scripts	ssh-helper
+scripts/ssh-helper/probe.ts	2021	42	.ts	scripts	ssh-helper
+scripts/ssh-helper/release.ts	4525	76	.ts	scripts	ssh-helper
+scripts/ssh-helper/worker-probe.ts	4074	67	.ts	scripts	ssh-helper
+scripts/stage-dsh-docs.spec.ts	7064	137	.ts	scripts	
+scripts/stage-dsh-docs.ts	8690	185	.ts	scripts	
+scripts/test-dom-environment.ts	1585	41	.ts	scripts	
+scripts/test-fixture-cleanup.ts	1977	49	.ts	scripts	
+scripts/test-non-loopback-address.spec.ts	1772	57	.ts	scripts	
+scripts/test-non-loopback-address.ts	2880	70	.ts	scripts	
+scripts/test-official-listing-guard.spec.ts	1344	26	.ts	scripts	
+scripts/test-official-listing-guard.ts	1091	22	.ts	scripts	
+scripts/test-proxy-environment.spec.ts	2145	44	.ts	scripts	
+scripts/test-proxy-environment.ts	3045	63	.ts	scripts	
+scripts/tests/ci-master-platforms.spec.ts	8120	166	.ts	scripts	tests
+scripts/tests/ci-release-selfhosted.spec.ts	19171	325	.ts	scripts	tests
+scripts/translation-brief.spec.ts	11239	287	.ts	scripts	
+scripts/translation-brief.ts	23379	512	.ts	scripts	
+scripts/translation-links.spec.ts	10893	281	.ts	scripts	
+scripts/translation-links.ts	14435	384	.ts	scripts	
+scripts/translation-pairing.manifest.json	1003	26	.json	scripts	
+scripts/translation-pairing.spec.ts	28611	621	.ts	scripts	
+scripts/translation-pairing.ts	17614	421	.ts	scripts	
+scripts/translation-pairing-git.ts	2529	60	.ts	scripts	
+scripts/translation-pairing-record.ts	13084	299	.ts	scripts	
+scripts/translation-prompt.expected.spec.ts	1305	32	.ts	scripts	
+scripts/translation-prompt.spec.ts	11801	234	.ts	scripts	
+scripts/translation-prompt.ts	11581	259	.ts	scripts	
+scripts/ts-project.ts	5771	151	.ts	scripts	
+scripts/type-equiv.manifest.json	91254	2962	.json	scripts	
+scripts/type-equiv-prefilter.spec.ts	1306	33	.ts	scripts	
+scripts/type-equiv-prefilter.ts	1168	19	.ts	scripts	
+scripts/typert-faces.ts	237	5	.ts	scripts	
+scripts/typert-workspace.fixture.ts	4911	106	.ts	scripts	
+scripts/types/client-assets/index.d.ts	599	30	.ts	scripts	types
+scripts/types/client-build-environment/index.d.ts	229	7	.ts	scripts	types
+scripts/verify-agent-note-classification.ts	987	27	.ts	scripts	
+scripts/verify-agent-note-format.ts	4482	94	.ts	scripts	
+scripts/verify-application-entrypoints.spec.ts	5506	135	.ts	scripts	
+scripts/verify-application-entrypoints.ts	8527	204	.ts	scripts	
+scripts/verify-archived-agent-notes.ts	4765	115	.ts	scripts	
+scripts/verify-client-domain-graph.spec.ts	544	14	.ts	scripts	
+scripts/verify-client-domain-graph.ts	4224	104	.ts	scripts	
+scripts/verify-client-packages.spec.ts	23298	527	.ts	scripts	
+scripts/verify-client-packages.ts	33200	781	.ts	scripts	
+scripts/verify-client-route-resolution.spec.ts	9510	199	.ts	scripts	
+scripts/verify-client-route-resolution.ts	15860	339	.ts	scripts	
+scripts/verify-client-ui-i18n.spec.ts	3344	81	.ts	scripts	
+scripts/verify-client-ui-i18n.ts	12743	361	.ts	scripts	
+scripts/verify-concrete-terms.spec.ts	9816	179	.ts	scripts	
+scripts/verify-concrete-terms.ts	4586	105	.ts	scripts	
+scripts/verify-config-source-ownership.spec.ts	1278	30	.ts	scripts	
+scripts/verify-config-source-ownership.ts	2222	56	.ts	scripts	
+scripts/verify-cordis-config.spec.ts	7241	170	.ts	scripts	
+scripts/verify-cordis-config.ts	26243	586	.ts	scripts	
+scripts/verify-default-product-isolation.spec.ts	26546	493	.ts	scripts	
+scripts/verify-default-product-isolation.ts	21164	413	.ts	scripts	
+scripts/verify-doc-budgets.ts	2302	58	.ts	scripts	
+scripts/verify-doc-refs.ts	1916	45	.ts	scripts	
+scripts/verify-doc-site-fragments.spec.ts	3252	97	.ts	scripts	
+scripts/verify-doc-site-fragments.ts	6494	181	.ts	scripts	
+scripts/verify-dsh-package-licenses.spec.ts	2122	59	.ts	scripts	
+scripts/verify-dsh-package-licenses.ts	3185	89	.ts	scripts	
+scripts/verify-export-jsdoc.ts	29148	607	.ts	scripts	
+scripts/verify-locale-metadata.spec.ts	8820	155	.ts	scripts	
+scripts/verify-locale-metadata.ts	4933	81	.ts	scripts	
+scripts/verify-md-links.spec.ts	6016	142	.ts	scripts	
+scripts/verify-md-links.ts	10425	256	.ts	scripts	
+scripts/verify-md-wrap.ts	3069	87	.ts	scripts	
+scripts/verify-mermaid.ts	3552	106	.ts	scripts	
+scripts/verify-no-bare-dispatcher.spec.ts	5515	143	.ts	scripts	
+scripts/verify-no-bare-dispatcher.ts	10659	225	.ts	scripts	
+scripts/verify-node-next-types.ts	6019	164	.ts	scripts	
+scripts/verify-no-top-level-await.spec.ts	10112	220	.ts	scripts	
+scripts/verify-no-top-level-await.ts	12697	267	.ts	scripts	
+scripts/verify-no-unknown-casts.spec.ts	11660	263	.ts	scripts	
+scripts/verify-no-unknown-casts.ts	8167	186	.ts	scripts	
+scripts/verify-npm-install-layout.spec.ts	6036	150	.ts	scripts	
+scripts/verify-npm-install-layout.ts	12072	277	.ts	scripts	
+scripts/verify-optional-dependency-imports.spec.ts	4497	130	.ts	scripts	
+scripts/verify-optional-dependency-imports.ts	9752	213	.ts	scripts	
+scripts/verify-package-dependencies.spec.ts	60870	1284	.ts	scripts	
+scripts/verify-package-dependencies.ts	50631	1106	.ts	scripts	
+scripts/verify-package-meta.spec.ts	32809	685	.ts	scripts	
+scripts/verify-package-meta.ts	14341	285	.ts	scripts	
+scripts/verify-package-paths.spec.ts	3480	73	.ts	scripts	
+scripts/verify-package-paths.ts	4774	113	.ts	scripts	
+scripts/verify-package-readme-limitations.ts	4679	96	.ts	scripts	
+scripts/verify-package-readme-model-experience.ts	55035	658	.ts	scripts	
+scripts/verify-package-readme-summaries.spec.ts	1896	46	.ts	scripts	
+scripts/verify-package-readme-summaries.ts	3024	77	.ts	scripts	
+scripts/verify-plugin-entry-exports.spec.ts	16071	346	.ts	scripts	
+scripts/verify-plugin-entry-exports.ts	25369	485	.ts	scripts	
+scripts/verify-plugin-record-callers.spec.ts	17082	328	.ts	scripts	
+scripts/verify-plugin-record-callers.ts	14483	293	.ts	scripts	
+scripts/verify-product-use.spec.ts	15728	301	.ts	scripts	
+scripts/verify-product-use.ts	18618	314	.ts	scripts	
+scripts/verify-public-repository-links.spec.ts	2233	45	.ts	scripts	
+scripts/verify-public-repository-links.ts	4216	99	.ts	scripts	
+scripts/verify-repository-references.spec.ts	14035	287	.ts	scripts	
+scripts/verify-repository-references.ts	7488	157	.ts	scripts	
+scripts/verify-runtime-closure.spec.ts	7265	183	.ts	scripts	
+scripts/verify-runtime-closure.ts	9491	237	.ts	scripts	
+scripts/verify-skill-invocation-metadata.spec.ts	2014	53	.ts	scripts	
+scripts/verify-skill-invocation-metadata.ts	4951	122	.ts	scripts	
+scripts/verify-ssh-helper-artifact.ts	9026	167	.ts	scripts	
+scripts/verify-ssh-helper-ssh.ts	6418	108	.ts	scripts	
+scripts/verify-subsystem-pages.spec.ts	5033	123	.ts	scripts	
+scripts/verify-subsystem-pages.ts	5472	137	.ts	scripts	
+scripts/verify-translation-pairing.ts	15914	368	.ts	scripts	
+scripts/verify-translation-prompt.ts	4757	98	.ts	scripts	
+scripts/verify-type-equiv.ts	17690	396	.ts	scripts	
+scripts/verify-upgrade-guides.spec.ts	10862	228	.ts	scripts	
+scripts/verify-upgrade-guides.ts	8820	143	.ts	scripts	
+scripts/verify-v3-event-vocabulary.spec.ts	7556	146	.ts	scripts	
+scripts/verify-v3-event-vocabulary.ts	5634	105	.ts	scripts	
+scripts/verify-version-sync.spec.ts	5655	133	.ts	scripts	
+scripts/verify-version-sync.ts	7972	210	.ts	scripts	
+scripts/vitest-environment.compat.spec.ts	1432	32	.ts	scripts	
+scripts/volatile-config.fixture.ts	521	11	.ts	scripts	
+scripts/volatile-config.spec.ts	8674	151	.ts	scripts	
+scripts/web-product-bundle-isolation.spec.ts	14166	271	.ts	scripts	
+scripts/web-product-bundle-isolation.ts	8815	199	.ts	scripts	
+scripts/windows-package-workflow.spec.ts	12893	223	.ts	scripts	
+scripts/wine-windows-gates.sh	13677	296	.sh	scripts	
+scripts/workspace-package-globs.spec.ts	1521	23	.ts	scripts	
+scripts/workspace-package-globs.ts	524	11	.ts	scripts	
+THIRD_PARTY_NOTICES.md	26763	323	.md	.	
+tsconfig.base.client.json	563	13	.json	.	
+tsconfig.base.json	56654	632	.json	.	
+tsconfig.client.json	9556	176	.json	.	
+tsconfig.host.json	30524	610	.json	.	
+tsconfig.json	670	15	.json	.	
+tsconfig.node.base.json	134	7	.json	.	
+tsdown.config.ts	1616	36	.ts	.	
+vendor/AGENTS.md	657	7	.md	vendor	
+vendor/CLAUDE.md	9	1	.md	vendor	
+vendor/cordis/bin.js	388	16	.js	vendor	cordis
+vendor/cordis/LICENSE	1071	21		vendor	cordis
+vendor/cordis/package.json	1237	51	.json	vendor	cordis
+vendor/cordis/README.md	4794	115	.md	vendor	cordis
+vendor/cordis/src/context.ts	6165	146	.ts	vendor	cordis
+vendor/cordis/src/events.ts	16163	371	.ts	vendor	cordis
+vendor/cordis/src/fiber.ts	28013	820	.ts	vendor	cordis
+vendor/cordis/src/index.ts	815	16	.ts	vendor	cordis
+vendor/cordis/src/logger.ts	8810	276	.ts	vendor	cordis
+vendor/cordis/src/reflect.ts	16565	436	.ts	vendor	cordis
+vendor/cordis/src/registry.ts	11753	337	.ts	vendor	cordis
+vendor/cordis/src/service.ts	4263	115	.ts	vendor	cordis
+vendor/cordis/src/utils.ts	10716	294	.ts	vendor	cordis
+vendor/cordis/tsconfig.json	479	23	.json	vendor	cordis
+vendor/cosmokit/LICENSE	1071	21		vendor	cosmokit
+vendor/cosmokit/package.json	740	32	.json	vendor	cosmokit
+vendor/cosmokit/README.md	1418	30	.md	vendor	cosmokit
+vendor/cosmokit/src/array.ts	1453	42	.ts	vendor	cosmokit
+vendor/cosmokit/src/index.ts	506	12	.ts	vendor	cosmokit
+vendor/cosmokit/src/misc.ts	3865	78	.ts	vendor	cosmokit
+vendor/cosmokit/src/string.ts	3928	113	.ts	vendor	cosmokit
+vendor/cosmokit/src/time.ts	3054	92	.ts	vendor	cosmokit
+vendor/cosmokit/src/types.ts	7038	168	.ts	vendor	cosmokit
+vendor/cosmokit/src/volatile.ts	3637	86	.ts	vendor	cosmokit
+vendor/cosmokit/tsconfig.json	325	15	.json	vendor	cosmokit
+vendor/group/LICENSE	1071	21		vendor	group
+vendor/group/package.json	872	36	.json	vendor	group
+vendor/group/README.md	518	21	.md	vendor	group
+vendor/group/src/index.ts	80	3	.ts	vendor	group
+vendor/group/tsconfig.json	425	23	.json	vendor	group
+vendor/hmr/LICENSE	1071	21		vendor	hmr
+vendor/hmr/package.json	1407	59	.json	vendor	hmr
+vendor/hmr/README.md	1520	51	.md	vendor	hmr
+vendor/hmr/src/error.ts	1036	36	.ts	vendor	hmr
+vendor/hmr/src/index.ts	14130	428	.ts	vendor	hmr
+vendor/hmr/tsconfig.json	588	35	.json	vendor	hmr
+vendor/include/LICENSE	1071	21		vendor	include
+vendor/include/package.json	977	40	.json	vendor	include
+vendor/include/README.md	2800	53	.md	vendor	include
+vendor/include/src/index.ts	15358	465	.ts	vendor	include
+vendor/include/src/journal.ts	8077	242	.ts	vendor	include
+vendor/include/src/patch.ts	7806	261	.ts	vendor	include
+vendor/include/tsconfig.json	494	27	.json	vendor	include
+vendor/loader/LICENSE	1071	21		vendor	loader
+vendor/loader/package.json	1069	45	.json	vendor	loader
+vendor/loader/README.md	6238	71	.md	vendor	loader
+vendor/loader/src/config/diff.ts	2171	45	.ts	vendor	loader
+vendor/loader/src/config/entry.ts	8383	239	.ts	vendor	loader
+vendor/loader/src/config/group.ts	2707	89	.ts	vendor	loader
+vendor/loader/src/config/isolate.ts	5621	176	.ts	vendor	loader
+vendor/loader/src/config/tree.ts	7552	205	.ts	vendor	loader
+vendor/loader/src/config/utils.ts	1051	32	.ts	vendor	loader
+vendor/loader/src/index.ts	7710	219	.ts	vendor	loader
+vendor/loader/src/internal.ts	5765	144	.ts	vendor	loader
+vendor/loader/src/resolve.ts	2763	75	.ts	vendor	loader
+vendor/loader/tsconfig.json	499	27	.json	vendor	loader
+vendor/loader/tsdown.config.ts	323	16	.ts	vendor	loader
+vendor/logger-console/LICENSE	1071	21		vendor	logger-console
+vendor/logger-console/package.json	1043	42	.json	vendor	logger-console
+vendor/logger-console/README.md	877	35	.md	vendor	logger-console
+vendor/logger-console/src/browser.ts	646	17	.ts	vendor	logger-console
+vendor/logger-console/src/index.ts	864	28	.ts	vendor	logger-console
+vendor/logger-console/src/shared.ts	3125	100	.ts	vendor	logger-console
+vendor/logger-console/tsconfig.json	471	26	.json	vendor	logger-console
+vendor/logger-console/tsdown.config.ts	719	24	.ts	vendor	logger-console
+vendor/README.md	18663	67	.md	vendor	
+vendor/schemastery/LICENSE	1071	21		vendor	schemastery
+vendor/schemastery/package.json	938	39	.json	vendor	schemastery
+vendor/schemastery/README.md	9687	393	.md	vendor	schemastery
+vendor/schemastery/src/index.ts	36623	962	.ts	vendor	schemastery
+vendor/schemastery/tsconfig.json	414	21	.json	vendor	schemastery
+vendor/schemastery/tsdown.config.ts	547	17	.ts	vendor	schemastery
+vendor/timer/LICENSE	1071	21		vendor	timer
+vendor/timer/locale/en.json	41	5	.json	vendor	timer
+vendor/timer/locale/zh.json	122	6	.json	vendor	timer
+vendor/timer/package.json	934	40	.json	vendor	timer
+vendor/timer/README.md	1626	38	.md	vendor	timer
+vendor/timer/src/index.ts	5489	153	.ts	vendor	timer
+vendor/timer/tsconfig.json	427	23	.json	vendor	timer
+vitest.bench.config.ts	1243	30	.ts	.	
+vitest.config.ts	25384	439	.ts	.	
+vitest.e2e.config.ts	2817	62	.ts	.	
+vitest.expected.config.ts	721	19	.ts	.	
+vitest.shared.ts	1482	42	.ts	.	
+vitest.snapshot.config.ts	3478	73	.ts	.	
+vitest.web.config.ts	1514	37	.ts	.	
+vitest.web.perf.config.ts	710	21	.ts	.	
+vitest.web-stress.config.ts	566	15	.ts	.	
+website/.gitignore	41	4	.gitignore	website	
+website/.vitepress/code-groups.ts	1547	34	.ts	website	.vitepress
+website/.vitepress/config.ts	15038	386	.ts	website	.vitepress
+website/.vitepress/theme/code-group.css	287	10	.css	website	.vitepress
+website/.vitepress/theme/css.d.ts	71	2	.ts	website	.vitepress
+website/.vitepress/theme/image-viewer.ts	4922	127	.ts	website	.vitepress
+website/.vitepress/theme/index.ts	3093	70	.ts	website	.vitepress
+website/.vitepress/theme/media-viewer.css	3229	149	.css	website	.vitepress
+website/.vitepress/theme/media-viewer.ts	9493	232	.ts	website	.vitepress
+website/.vitepress/theme/mermaid-viewer.ts	3703	98	.ts	website	.vitepress
+website/.vitepress/theme/page-markdown-actions.css	2729	144	.css	website	.vitepress
+website/.vitepress/theme/page-markdown-actions.ts	10122	215	.ts	website	.vitepress
+website/.vitepress/theme/table-filter.css	1826	100	.css	website	.vitepress
+website/.vitepress/theme/table-filter.ts	6835	171	.ts	website	.vitepress
+website/AGENTS.md	3771	25	.md	website	
+website/build.ts	3368	86	.ts	website	
+website/docs.ts	23909	599	.ts	website	
+website/package.json	624	24	.json	website	
+website/public/favicon.svg	4585	13	.svg	website	public
+website/public/wordmark.svg	4611	15	.svg	website	public
+website/raw-markdown.ts	1911	52	.ts	website	
+website/tests/code-groups.spec.ts	3523	71	.ts	website	tests
+website/tests/expected/image-viewer.en-US.html	2304	3	.html	website	tests
+website/tests/expected/image-viewer.zh-CN.html	2293	3	.html	website	tests
+website/tests/expected/page-markdown-actions.en-US.html	1114	1	.html	website	tests
+website/tests/expected/page-markdown-actions.zh-CN.html	1118	1	.html	website	tests
+website/tests/expected/page-markdown-menu.en-US.html	3035	1	.html	website	tests
+website/tests/expected/page-markdown-menu.zh-CN.html	3077	1	.html	website	tests
+website/tests/expected/page-markdown-static.en-US.html	498	1	.html	website	tests
+website/tests/expected/page-markdown-static.zh-CN.html	519	1	.html	website	tests
+website/tests/expected/table-filter.en-US.html	283	1	.html	website	tests
+website/tests/expected/table-filter.zh-CN.html	289	1	.html	website	tests
+website/tests/image-viewer.spec.ts	15788	350	.ts	website	tests
+website/tests/mermaid-viewer.spec.ts	12736	274	.ts	website	tests
+website/tests/page-markdown-actions.spec.ts	22037	479	.ts	website	tests
+website/tests/raw-markdown.spec.ts	4004	83	.ts	website	tests
+website/tests/table-filter.spec.ts	10104	249	.ts	website	tests

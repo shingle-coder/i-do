@@ -10,7 +10,16 @@
     "docs/i18n/terminology.md",
     "docs/i18n/translation-prompt.md",
     "docs/superpowers/README.md",
+    "docs/superpowers/file-notes/agents.md",
+    "docs/superpowers/file-notes/apps-snapshots.md",
+    "docs/superpowers/file-notes/docs.md",
+    "docs/superpowers/file-notes/packages-a.md",
+    "docs/superpowers/file-notes/packages-b.md",
+    "docs/superpowers/file-notes/packages-c.md",
+    "docs/superpowers/file-notes/packages-d.md",
+    "docs/superpowers/file-notes/packages-e-misc.md",
     "docs/superpowers/fork-changes.md",
+    "docs/superpowers/inventory/00-index.md",
     "docs/superpowers/modules/00-consistency-review.md",
     "docs/superpowers/modules/01-agent-runtime.md",
     "docs/superpowers/modules/02-tools-execution.md",
@@ -21,6 +30,7 @@
     "docs/superpowers/modules/07-collaboration-scheduling.md",
     "docs/superpowers/modules/08-infrastructure.md",
     "docs/superpowers/phase-1-rebrand-plan.md",
-    "docs/superpowers/project-overview.md"
+    "docs/superpowers/project-overview.md",
+    "docs/superpowers/目录结构.md"
   ]
 }
