@@ -51,6 +51,7 @@ pnpm run verify-translation-pairing README.md
 | 品牌素材 | `docs/logo/**` | 源图、衍生 SVG/PNG/ICO、预览图 | 已落地 | 低 |
 | 文档 | `README.md`、`README.zh.md`、`README.i18n.yaml` | 改写为 i-do 项目说明并重录配对记录 | 已落地 | **高**，上游 README 持续更新 |
 | 文档门禁 | `scripts/translation-pairing.manifest.json` | 追加 `docs/superpowers/**` 两条排除项 | 已落地 | 中，上游可能改动同文件 |
+| 依赖升级 | `.github/dependabot.yml` | 两个生态设置 `open-pull-requests-limit: 0`，镜像仓库不接收升级 PR | 已落地 | 低 |
 | 二开文档 | `docs/superpowers/**` | 方案与修改清单 | 已落地 | 低 |
 | 产品名 | `apps/desktop/scripts/electron-builder-config.mjs` | `productName`、`artifactName` 改为 i-do | 计划中 | 中 |
 | 应用标识 | `apps/desktop/.env.windows`、`.env.macos`、`config/*-packaging/*.env.example` | `DSH_DESKTOP_APP_ID` 改为 i-do 反向域名 | 计划中 | 低 |
@@ -69,6 +70,7 @@ pnpm run verify-translation-pairing README.md
 4. **manifest 冲突**：保留上游新增项，并确保 `docs/superpowers/phase-1-rebrand-plan.md`、`docs/superpowers/fork-changes.md` 两条排除项存在。
 5. **品牌文案冲突**：`locale.ts`、`installer/locales/*.json` 取我方，但需要跟随上游新增的 key 补齐翻译，避免缺键回退英文。
 6. **机制代码不改**：`packages/**`、`docs/architecture.md` 与上游保持一致，二开只在应用层与资源层。
+7. **Dependabot 保持关闭**：同步后确认 `.github/dependabot.yml` 两个生态仍带 `open-pull-requests-limit: 0`，否则镜像仓库会重新产生升级分支与 PR。
 
 ## 5. 同步后的校验
 

@@ -3,6 +3,8 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    # The mirror repository does not accept dependency-update pull requests.
+    open-pull-requests-limit: 0
     exclude-paths:
       # Vendored Cordis sources follow vendor/README.md instead of registry updates.
       - "vendor/**"
@@ -18,6 +20,8 @@ updates:
 
   - package-ecosystem: "uv"
     directory: "/python/sdk"
+    # The mirror repository does not accept dependency-update pull requests.
+    open-pull-requests-limit: 0
     schedule:
       interval: "cron"
       cronjob: "0 4 * * *"
