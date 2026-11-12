@@ -1,38 +1,24 @@
-# DeepSeek Harness
+# i-do
 
 English | [中文](README.zh.md)
 
-DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
+i-do is an agent workspace built on the open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) agent harness.
 
-It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
+It keeps the upstream **everything-is-a-plugin** architecture and Cordis runtime, and ships a rebranded desktop application, web UI, and documentation site for the i-do deployment.
 
-Documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
+Documentation: [https://i-do.net](https://i-do.net)
 
 ## Developer preview
 
-DeepSeek Harness is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+i-do is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
-Review the [safety notice](SAFETY.md) before running the project.
+Review the safety notice in [SAFETY.md](SAFETY.md) before running the project.
 
 ## Run
 
-### Run from `npm`
-
-Install `Node.js`, then run:
+### From source
 
 ```sh
-npx @deepseek-ai/dsh web
-```
-
-The command starts the Web UI at `http://127.0.0.1:3080` by default and opens it in the default browser for a local launch. An SSH launch only prints the host URL because the SSH client or editor owns the local forwarded address. Pass `--no-open` to run the server without opening a browser. See [Web UI guide](docs/user/guide/index.md).
-
-### Run from source
-
-To run from a repository checkout:
-
-```sh
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
 pnpm install
 pnpm run build
 pnpm dsh web
@@ -40,38 +26,32 @@ pnpm dsh web
 
 `pnpm run build` prepares the repository artifacts. `pnpm dsh web` uses those built artifacts without rebuilding.
 
+## Fork notes
+
+This repository is a second development of DeepSeek Harness. The phase-one scope covers artwork replacement, product naming, and service origins; the plan lives in `docs/phase-1-rebrand-plan.md`.
+
+Brand assets are generated from `docs/logo/logo.png`:
+
+```sh
+node scripts/brand/render-icons.mjs
+```
+
 ## Community and support
 
-- Submit feedback or bug reports through [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions).
-- Add the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic to your plugin repository for discoverability.
-- Join <a href="https://discord.gg/4MrtZUhpxg">DeepSeek Harness Discord community</a>.
+- Primary repository: [cnb.cool/zxui/ido](https://cnb.cool/zxui/ido)
+- Mirror repository: [github.com/shingle-coder/i-do](https://github.com/shingle-coder/i-do)
+- Deployment domain: [i-do.net](https://i-do.net)
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Development
-
-Start with the [development guide](docs/development.md) and [architecture documentation](docs/architecture.md).
-
-`pnpm run dev:web` builds, serves, and rebuilds client bundles on source edits in one terminal, and `make help` lists the matching Make targets for Web and Desktop; the guide's application commands section owns the full table.
-
-For agents, follow [AGENTS.md](AGENTS.md).
-
-## Citation
-
-```bibtex
-@misc{deepseek-harness2026,
-  title={DeepSeek Harness: Everything is a Plugin},
-  author={DeepSeek-AI},
-  year={2026},
-  publisher={GitHub},
-  howpublished={\url{https://github.com/deepseek-ai/deepseek-harness}},
-}
-```
+See [AGENTS.md](AGENTS.md) for repository rules and [docs/development.md](docs/development.md) for the development guide.
 
 ## License
 
 [MIT](LICENSE)
 
 Third-party dependencies and their licenses are disclosed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Attribution
+
+i-do is derived from DeepSeek Harness by DeepSeek AI. The original project and its MIT license are preserved in this repository; upstream documentation and design notes remain the work of their authors.

@@ -2,33 +2,30 @@
 # section, a hash of its English and Chinese blocks outside code blocks and generated regions.
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write README.md
-/deepseek-harness:
-  en: f68c4f080ce55ff2
-  zh: 88a76d7f7f0b260e
-/deepseek-harness/developer-preview:
-  en: 4ef4d8a71ac143f0
-  zh: 1bfc3149ba8e5543
-/deepseek-harness/run:
+/i-do:
+  en: c2f24c40f41171df
+  zh: bcc1cd3f4546031a
+/i-do/developer-preview:
+  en: 8996d0d3372e487f
+  zh: 4cb943ed39045644
+/i-do/run:
   en: 4e0248e4c6474fc6
   zh: eb2fb8d78c7d6bc0
-/deepseek-harness/run/run-from-npm:
-  en: e22005cd42e6cbad
-  zh: 0f536f4208df1d60
-/deepseek-harness/run/run-from-source:
-  en: 819e3f7c144d0d64
-  zh: de815f040975dba7
-/deepseek-harness/community-and-support:
-  en: 20acf6451fdc869b
-  zh: d06246dd019ecef7
-/deepseek-harness/contributing:
-  en: cabc2d3e9f8898bd
-  zh: 83b6d238bae29ce3
-/deepseek-harness/development:
-  en: 803ca2b11b497bed
-  zh: 8b4071eb0e7783ef
-/deepseek-harness/citation:
-  en: 6704e9e5a8d49a91
-  zh: 85c9cdd8d56f8e9d
-/deepseek-harness/license:
+/i-do/run/from-source:
+  en: 91b4c3c637129d71
+  zh: 0ff999a92e4853b1
+/i-do/fork-notes:
+  en: 2d3a2d601a6ac5f1
+  zh: b1b7bf5b679c460b
+/i-do/community-and-support:
+  en: e174b4ff7c211e87
+  zh: 212591da93fdd7f3
+/i-do/contributing:
+  en: 90e2c9108582b1fb
+  zh: 08031b35203e1451
+/i-do/license:
   en: 926995344fc1c72b
   zh: c92fab5abf85932f
+/i-do/attribution:
+  en: c26dddeeb122b99c
+  zh: d86a65ed8adbc1a4
