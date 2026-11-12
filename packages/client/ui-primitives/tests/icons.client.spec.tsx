@@ -290,6 +290,18 @@ describe('FishLogo', () => {
   })
 })
 
+describe('BrandMark', () => {
+  it('renders the two iDo contours in currentColor inside a square box', () => {
+    const { container } = render(<primitives.BrandMark />)
+    const svg = container.querySelector('svg')!
+    expect(svg.getAttribute('width')).toBe('24')
+    expect(svg.getAttribute('height')).toBe('24')
+    expect(svg.getAttribute('viewBox')).toBe('187 177 728 728')
+    expect(container.querySelectorAll('path')).toHaveLength(2)
+    expect(container.innerHTML).toContain('currentColor')
+  })
+})
+
 describe('BrandWordmark', () => {
   it('can render the name artwork with or without its leading mark', () => {
     const view = render(<primitives.BrandWordmark />)

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * i-do 品牌图标生成工具。
+ * iDo 品牌图标生成工具。
  *
  * 输入一张方形位图（默认 `docs/logo/logo.png`），描摹出矢量轮廓，再产出桌面端与
  * 文档站需要的全部图标资产：
@@ -369,8 +369,8 @@ function buildWordmarkDocument(body) {
   <circle cx="168" cy="39" r="13"/>
 </g>
 <circle cx="76" cy="12" r="5" fill="currentColor"/>`
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="196" height="64" viewBox="0 0 196 64" role="img" aria-label="i-do">
-<title>i-do</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="196" height="64" viewBox="0 0 196 64" role="img" aria-label="iDo">
+<title>iDo</title>
 <g transform="scale(0.0625)">
 ${monochrome}
 </g>
@@ -454,9 +454,9 @@ async function main() {
     .map(shape => `<path d="${shape.path}" fill="url(#ido-brand)" fill-rule="evenodd"/>`)
     .join('\n')
 
-  const iconSvg = buildIconDocument(body, 'i-do', { canvas: 1104 })
-  const macSvg = buildIconDocument(body, 'i-do', { canvas: 1104 })
-  const windowsSvg = buildIconDocument(body, 'i-do', {
+  const iconSvg = buildIconDocument(body, 'iDo', { canvas: 1104 })
+  const macSvg = buildIconDocument(body, 'iDo', { canvas: 1104 })
+  const windowsSvg = buildIconDocument(body, 'iDo', {
     canvas: 1024,
     wrapper: `translate(32 32) scale(0.9375) translate(-${TILE.insetX} -${TILE.insetY})`,
     glyphId: 'tray-glyph',

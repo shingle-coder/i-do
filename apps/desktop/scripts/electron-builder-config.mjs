@@ -44,6 +44,18 @@ import {
  * @param {string | undefined} preparedRuntimeVersion - Version that private tree declares, which qualification rewrites away from the product version.
  * @returns {object} electron-builder configuration.
  */
+/** Product name shared by the builder config, packaging scripts, and packaged-runtime checks. */
+export const PRODUCT_NAME = 'iDo'
+
+/**
+ * Build the electron-builder configuration for one packaging target.
+ * @param env Packaging environment.
+ * @param hostPlatform Build-host platform used when no target override exists.
+ * @param hostArch Build-host architecture used when no target override exists.
+ * @param preparedRuntime Optional prepared runtime tree for qualification runs.
+ * @param preparedRuntimeVersion Version of the prepared runtime tree.
+ * @returns The electron-builder config object.
+ */
 export function createElectronBuilderConfig(
   env = process.env,
   hostPlatform = process.platform,
@@ -108,7 +120,7 @@ export function createElectronBuilderConfig(
   const packaged = resolveDesktopBuildCommit(env)
   return {
     appId,
-    protocols: [{ name: 'DeepSeek Harness', schemes: ['dsh'] }],
+    protocols: [{ name: PRODUCT_NAME, schemes: ['dsh'] }],
     extraMetadata: {
       dshDesktopAppId: appId,
       dshDesktopUpdateChannel: update?.channel ?? 'nightly',
@@ -116,11 +128,11 @@ export function createElectronBuilderConfig(
       ...buildVersion === productVersion ? {} : { version: buildVersion },
       ...packaged === undefined ? {} : { dshBuildCommit: packaged.commit, dshBuildDirty: packaged.dirty },
     },
-    productName: 'DeepSeek Harness',
+    productName: PRODUCT_NAME,
     // The default copyright uses author.name; this line names the product instead.
     copyright: `Copyright © ${new Date().getFullYear()} \${productName}`,
     // Unsigned builds carry their own suffix so a shared file can never pass for a release artifact.
-    artifactName: `deepseek-harness-\${version}-\${os}-\${arch}${output.suffix}.\${ext}`,
+    artifactName: `iDo-\${version}-\${os}-\${arch}${output.suffix}.\${ext}`,
     directories: { output: output.directory },
     asar: true,
     electronDist: buildPaths.electron,
@@ -169,7 +181,7 @@ export function createElectronBuilderConfig(
       // macOS matches the application locale against this bundle, not Electron Framework resources.
       extendInfo: {
         CFBundleLocalizations: ['en', 'zh_CN', 'ja', 'es', 'fr', 'de', 'ru', 'pt'],
-        NSMicrophoneUsageDescription: 'DeepSeek Harness uses your microphone to transcribe speech into message drafts.',
+        NSMicrophoneUsageDescription: `${PRODUCT_NAME} uses your microphone to transcribe speech into message drafts.`,
       },
       // Ad-hoc signing keeps the modified Electron executable runnable without a Developer ID.
       identity: unsigned ? '-' : macOSSigning?.signingIdentity,

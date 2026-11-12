@@ -1,6 +1,6 @@
 {
-  "name": "DeepSeek Harness",
-  "short_name": "DSH",
+  "name": "iDo",
+  "short_name": "iDo",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

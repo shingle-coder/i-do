@@ -1,4 +1,4 @@
-# i-do 一期二开方案
+# iDo 一期二开方案
 
 本文档定义在 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 基础上做二次开发（下称“二开”）的第一期实施方案，覆盖品牌换标、产品更名、域名替换与仓库迁移。
 
@@ -13,9 +13,13 @@
 ## 进度概览
 
 - [x] 二开仓库建立，推送 cnb 与 GitHub 镜像，默认分支统一为 `main`
-- [x] 桌面图标、托盘图标、Web 安装图标、文档站字标替换为 i-do 素材
+- [x] 桌面图标、托盘图标、Web 安装图标、文档站字标替换为 iDo 素材
 - [x] 中英文 README 改写，文档门禁全绿
-- [ ] 产品名、应用标识、协议、域名、界面与安装器文案替换
+- [x] 产品名 `iDo`、安装包名前缀、应用标识 `net.i-do.desktop` 替换完成
+- [x] 安装器品牌图与 8 种语言安装文案替换完成
+- [x] 应用侧栏品牌替换完成（iDo 图形 + `iDo 本地构建` 文案）
+- [x] 应用菜单、关于面板、欢迎页、托盘与 Web 标题/PWA 名称统一为 iDo
+- [ ] 协议 `ido://`、域名与服务端点、发布元数据替换
 - [ ] 文档站配置与各包发布元数据改名
 - [ ] 未签名安装包验证、签名与分发流程
 
@@ -26,7 +30,7 @@
 ### 1.1 本期必须完成
 
 1. 更换 logo 与图标（桌面端、托盘、Web/PWA、文档站、安装器）。
-2. 产品名称改为 `i-do`，域名改为 `i-do.net`。
+2. 产品名称改为 `iDo`，域名改为 `i-do.net`。
 3. 仓库迁移到 `https://cnb.cool/zxui/ido`，用本地工作树覆盖线上既有内容。
 
 ### 1.2 本期不做（保留到二期）
@@ -46,7 +50,7 @@
 | D4 | 自动更新/下载域名 | `https://download.i-do.net` |
 | D5 | 强制更新策略源 | `https://policy.i-do.net`（与登录来源同域时按实际部署调整） |
 | D6 | 应用标识 appId | `net.i-do.desktop` |
-| D7 | 是否保留 “DeepSeek” 品牌字样 | 产品界面全部替换为 i-do；模型供应商名称保留 DeepSeek（合规如实标注） |
+| D7 | 是否保留 “DeepSeek” 品牌字样 | 产品界面全部替换为 iDo；模型供应商名称保留 DeepSeek（合规如实标注） |
 | D8 | 线上仓库覆盖确认 | 覆盖不可逆，执行前需书面确认 cnb 仓库现有内容可丢弃 |
 
 ## 2. 现状盘点：品牌触点清单
@@ -139,7 +143,7 @@
 - **方式 B（历史干净）**：`git init` 新仓库，首个提交为完整源码导入。
 
 ```powershell
-# 1. 备份现有 i-do/docs（logo 素材）
+# 1. 备份现有 iDo/docs（logo 素材）
 Move-Item D:\ai\deepseek\i-do\docs D:\ai\deepseek\i-do-docs-backup
 
 # 2. 克隆基线（保留 .git 与上游历史；node_modules 与构建产物由 .gitignore 排除）
@@ -185,8 +189,8 @@ git push --force github main
 
 品牌改动建议单独成 commit，便于回滚与上游对比：
 
-1. `chore: import deepseek-harness baseline for i-do`
-2. `feat(brand): rename product to i-do and replace icons`
+1. `chore: import deepseek-harness baseline for iDo`
+2. `feat(brand): rename product to iDo and replace icons`
 3. `feat(brand): point service origins to i-do.net`
 4. `docs: add phase-1 fork plan`
 
@@ -230,14 +234,14 @@ pnpm run test:docs
 ### 4.1 阶段一：应用标识
 
 1. `apps/desktop/scripts/electron-builder-config.mjs`
-   - `productName: 'i-do'`
+   - `productName: 'iDo'`
    - `artifactName: 'i-do-${version}-${os}-${arch}${output.suffix}.${ext}'`
 2. `apps/desktop/.env.windows` / `.env.macos`（以及 `config/*-packaging/*.env.example`）
-   - `DSH_DESKTOP_APP_ID=net.i-do.desktop`（appId 校验要求反向域名，`i-do` 含连字符合法）
+   - `DSH_DESKTOP_APP_ID=net.i-do.desktop`（appId 校验要求反向域名，`iDo` 含连字符合法）
 3. `apps/desktop/src/main.ts`
    - 协议注册与处理：`dsh` → `ido`，`dsh://open` → `ido://open`
 4. `apps/desktop/package.json`
-   - `description` 改为 i-do 描述；`author` 按新主体填写
+   - `description` 改为 iDo 描述；`author` 按新主体填写
 5. 注意副作用：`productName` 变化会改变安装目录、开始菜单名称、卸载项与 userData 目录（当前为 `%APPDATA%\@deepseek-ai\dsh-desktop`）。老用户体验迁移需单独说明，必要时增加数据目录迁移逻辑（可放二期）。
 
 ### 4.2 阶段二：图标与 logo
@@ -261,7 +265,7 @@ node scripts/brand/render-icons.mjs --source docs/logo/logo.png --output apps/de
 2. 校验托盘链路：`icon-windows.svg` 必须保留 `<g id="tray-glyph">` 且该组不得自带 `transform`（`render-tray-icon.ts` 会插入 1.2 倍放大，重复属性会导致 XML 解析失败）。工具已按该结构输出，可用 `pnpm --filter @deepseek-ai/dsh-desktop run render:tray-icon` 复核。
 3. 文档站字标使用 `currentColor`，保持 `config.ts:184-189` 的内联替换逻辑不变。
 4. Web/PWA 图标：运行 `apps/web/scripts/render-app-icons.ts` 从新的 `icon.svg` 重新产出。
-5. 安装器侧栏：`uninstaller-sidebar.bmp` 由构建目录生成，需确认生成脚本是否内嵌旧 logo；若有，替换生成源。
+5. 安装器界面：`apps/desktop/installer/assets/` 下的 `brand*.png` 与 `uninstaller-sidebar.png` 已替换为 iDo 的圆形图标 + 字标组合图（600×196、1200×392 与深色变体）；构建时由 `installer-ui` 阶段转成 BMP 供 NSIS 使用，换图后直接重新打包即可。
 
 验收：`icon-windows.png` 在 Windows 资源管理器中显示正常；托盘图标在 16/24/32 缩放下不糊；macOS Dock 图标无白边；浏览器标签页 favicon 正确。
 
@@ -273,8 +277,8 @@ node scripts/brand/render-icons.mjs --source docs/logo/logo.png --output apps/de
    - `releasePrefix` 中的 `dsh-desk` 视部署需要改名（会改变 COS 对象键，需与运维同步）
 2. 环境模板与预设
    - `DSH_DESKTOP_MANDATORY_UPDATE_PROD_ORIGIN=https://policy.i-do.net`
-   - `DOWNLOAD_TEST_ORIGIN` / `DOWNLOAD_PROD_*` 按 i-do 的 COS 桶与 CDN 填写
-   - Web 登录来源白名单 `allowedAuthOrigins` 指向 i-do 站点
+   - `DOWNLOAD_TEST_ORIGIN` / `DOWNLOAD_PROD_*` 按 iDo 的 COS 桶与 CDN 填写
+   - Web 登录来源白名单 `allowedAuthOrigins` 指向 iDo 站点
 3. 文档站
    - `DOCS_BASE` 按部署路径设置（例如 `https://i-do.net/docs` 时填 `/docs/`）
    - `config.ts:161/168/331` 的仓库链接改为 `https://cnb.cool/zxui/ido`
@@ -304,9 +308,9 @@ pnpm docs:check
 
 - [ ] `pnpm build` 通过（含 `build:check`）
 - [ ] 未签名 Windows 包可安装、可启动、窗口标题与图标正确
-- [ ] 安装目录、开始菜单、卸载项显示为 `i-do`
+- [ ] 安装目录、开始菜单、卸载项显示为 `iDo`
 - [ ] 托盘图标、协议 `ido://` 生效
-- [ ] 文档站标题、字标、favicon、仓库链接均为 i-do
+- [ ] 文档站标题、字标、favicon、仓库链接均为 iDo
 - [ ] `pnpm docs:check` 通过（Windows 下符号链接用例需要开发者模式）
 - [ ] 受影响的快照测试更新（产品名进入模型/用户可见输出时必须同步快照）
 
@@ -326,7 +330,7 @@ pnpm docs:check
 
 1. 本文档：`d:/ai/deepseek/i-do/docs/superpowers/phase-1-rebrand-plan.md`
 2. 品牌替换后的工作树，提交到 `https://cnb.cool/zxui/ido`
-3. 一个可安装、可启动的 i-do Windows 未签名安装包
+3. 一个可安装、可启动的 iDo Windows 未签名安装包
 4. 品牌触点核对表（实施完成后逐项打勾）
 
 ## 7. 附录：关键命令速查

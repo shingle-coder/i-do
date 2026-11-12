@@ -9,7 +9,18 @@
     "docs/i18n/style-samples.md",
     "docs/i18n/terminology.md",
     "docs/i18n/translation-prompt.md",
+    "docs/superpowers/README.md",
     "docs/superpowers/fork-changes.md",
-    "docs/superpowers/phase-1-rebrand-plan.md"
+    "docs/superpowers/modules/00-consistency-review.md",
+    "docs/superpowers/modules/01-agent-runtime.md",
+    "docs/superpowers/modules/02-tools-execution.md",
+    "docs/superpowers/modules/03-models-and-config.md",
+    "docs/superpowers/modules/04-web-client.md",
+    "docs/superpowers/modules/05-plugin-ecosystem.md",
+    "docs/superpowers/modules/06-hosts-and-sdks.md",
+    "docs/superpowers/modules/07-collaboration-scheduling.md",
+    "docs/superpowers/modules/08-infrastructure.md",
+    "docs/superpowers/phase-1-rebrand-plan.md",
+    "docs/superpowers/project-overview.md"
   ]
 }
