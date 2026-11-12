@@ -28,7 +28,7 @@ pnpm dsh web
 
 ## 二开说明
 
-本仓库是 DeepSeek Harness 的二次开发。一期范围包括品牌换标、产品改名与服务源切换，方案见 `docs/phase-1-rebrand-plan.md`。
+本仓库是 DeepSeek Harness 的二次开发。一期范围包括品牌换标、产品改名与服务源切换，方案见 `docs/superpowers/phase-1-rebrand-plan.md`。
 
 品牌资源由 `docs/logo/logo.png` 生成：
 

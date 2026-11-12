@@ -302,7 +302,7 @@ pnpm docs:check
 
 ## 6. 交付物
 
-1. 本文档：`d:/ai/deepseek/i-do/docs/phase-1-rebrand-plan.md`
+1. 本文档：`d:/ai/deepseek/i-do/docs/superpowers/phase-1-rebrand-plan.md`
 2. 品牌替换后的工作树，提交到 `https://cnb.cool/zxui/ido`
 3. 一个可安装、可启动的 i-do Windows 未签名安装包
 4. 品牌触点核对表（实施完成后逐项打勾）

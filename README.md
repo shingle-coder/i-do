@@ -28,7 +28,7 @@ pnpm dsh web
 
 ## Fork notes
 
-This repository is a second development of DeepSeek Harness. The phase-one scope covers artwork replacement, product naming, and service origins; the plan lives in `docs/phase-1-rebrand-plan.md`.
+This repository is a second development of DeepSeek Harness. The phase-one scope covers artwork replacement, product naming, and service origins; the plan lives in `docs/superpowers/phase-1-rebrand-plan.md`.
 
 Brand assets are generated from `docs/logo/logo.png`:
 
