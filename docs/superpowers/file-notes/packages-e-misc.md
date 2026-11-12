@@ -970,7 +970,7 @@ GUI 的项目列表：一条记录等于一个已存在的绝对目录，会话�
 | `LICENSE` | txt | 21 | MIT 许可证正文。 | 结构判断 |
 | `.gitlab-ci.yml` | yaml | 191 | GitLab CI 流水线定义。仓库同时存在 `.github/workflows`，两套 CI 并存，需确认哪套是当前有效门禁。 | 待确认 |
 
-**本节统计**：覆盖 48 个文件，文档 40 行（折叠 8 条：README、CONTRIBUTING、SAFETY、BRAND_GUIDELINES 四组三件套各折 2 条）。`精读` 1（`package.json`）、`结构判断` 37、`待确认` 2（`.env`、`CLAUDE.md`/`.gitlab-ci.yml` 合并计）。
+**本节统计**：覆盖 48 个文件，文档 40 行（折叠 8 条：README、CONTRIBUTING、SAFETY、BRAND_GUIDELINES 四组三件套各折 2 条）。`精读` 1（`package.json`）、`结构判断` 36、`待确认` 3（`.env`、`CLAUDE.md`、`.gitlab-ci.yml` 各占一行）。校验：1 + 36 + 3 = 40 ✓。
 
 ## 十四、.claude、.ssh、.trae
 
@@ -1117,7 +1117,7 @@ GUI 的项目列表：一条记录等于一个已存在的绝对目录，会话�
 | `pi-ai-provider-e2e.yml` | yml | 72 | 对 pi-ai 提供方的真实端点冒烟，需指定 Azure OpenAI 模型。 | `workflow_dispatch` | 结构判断 |
 | `docs-pages.yml` | yml | 93 | 构建文档站并发布到 GitHub Pages，串行执行不取消进行中的部署。 | `workflow_dispatch` | 结构判断 |
 
-**本节统计**：覆盖 67 个文件，文档 63 行（折叠 4 条：issue-management、preview-sizing 的 README 三件套各折 2 条）。`精读` 0、`结构判断` 66、`待确认` 1。
+**本节统计**：覆盖 67 个文件，文档 63 行（折叠 4 条：issue-management、preview-sizing 的 README 三件套各折 2 条）。`精读` 0、`结构判断` 62、`待确认` 1。校验：62 + 1 = 63 ✓。
 
 ## 十六、benchmarks（48 个）
 
@@ -1180,7 +1180,7 @@ GUI 的项目列表：一条记录等于一个已存在的绝对目录，会话�
 | `user-text/user-text.bench.client.ts` | ts | 195 | 主用例：用户输入路径的处理耗时。 | 结构判断 |
 | `user-text/user-text.worker.client.ts` | ts | 416 | 浏览器侧被测负载（文本解析与预处理）。 | 结构判断 |
 
-**本节统计**：覆盖 48 个文件，文档 40 行（折叠 8 条：README 三件套 4 组各折 2 条）。`精读` 0、`结构判断` 47、`待确认` 1。
+**本节统计**：覆盖 48 个文件，文档 40 行（折叠 8 条：README 三件套 4 组各折 2 条）。`精读` 0、`结构判断` 39、`待确认` 1。校验：39 + 1 = 40 ✓。
 
 ## 十七、native（79 个）
 
@@ -1407,7 +1407,7 @@ GUI 的项目列表：一条记录等于一个已存在的绝对目录，会话�
 | `src/deepseek_harness_runtime/_resources.py` | py | 116 | 资源校验与 office 启动参数：`validate_resources` / `validate_downloads` / `office_launch_args`。 | 结构判断 |
 | `src/deepseek_harness_runtime/deepseek-harness-runtime.json` | json | 1 | 包元数据标记文件（单行 JSON），`bundled_package_dir` 以它的存在判断包是否完整。 | 结构判断 |
 
-**本节统计**：覆盖 69 个文件，表格 57 行（折叠 12 条：README 三件套 5 组折 10 条、`expected` 3 个快照并入 1 行折 2 条）。`精读` 1、`结构判断` 68、`待确认` 2（`team-mode-projection.json` 的引用方、`test_smoke_model.py` 的网络开关）。
+**本节统计**：覆盖 69 个文件，表格 57 行（折叠 12 条：README 三件套 5 组折 10 条、`expected` 3 个快照并入 1 行折 2 条）。`精读` 2（`python/README.md` 三件套、`python/sdk/**/__init__.py`）、`结构判断` 55、`待确认` 0（另有两处职责内注明「待确认」，但整行仍按证据标为 `结构判断`：`team-mode-projection.json` 的引用方、`test_smoke_model.py` 的网络开关）。校验：2 + 55 = 57 ✓。
 
 ## 二十、scripts（465 个）
 
@@ -2154,4 +2154,404 @@ SSH 助手产物的构建库，被顶层 `build-exe-for-ssh-helper.ts` 与 `veri
 
 **20.24 小计**：2 个文件，表格 2 行，折叠 0 条；`精读` 0、`结构判断` 2、`待确认` 0。
 
-**第二十节总计**：覆盖 465 个文件，表格 443 行，折叠 22 条（20.3 的两组 `.mjs` + `.d.mts` 各并一行，折 2；20.18 的三对中英样例各并一行，折 3；20.21 的快照文件按目录合并，折 17）。校验：443 + 22 = 465 ✓。`精读` 0（本节全部为路径 + 调用点 + 命名推断，未逐行读正文）、`结构判断` 460、`待确认` 5。
+**第二十节总计**：覆盖 465 个文件，表格 443 行，折叠 22 条（20.3 的两组 `.mjs` + `.d.mts` 各并一行，折 2；20.18 的三对中英样例各并一行，折 3；20.21 的快照文件按目录合并，折 17）。校验：443 + 22 = 465 ✓。`精读` 0（本节全部为路径 + 调用点 + 命名推断，未逐行读正文）、`结构判断` 432、`待确认` 11。校验：432 + 11 = 443 ✓。
+
+## 二十一、疑似失效脚本
+
+这一节不重复文件职责（职责见第二十节），只回答一个问题：`scripts/` 下 465 个文件里，哪些已经没有任何调用方，可以安全清理？
+
+### 21.1 判据与做法
+
+「有没有被调用」不能靠文件名 grep 判断，因为 `run-gates.ts` 引的是 **npm script 名**而不是文件名。采用四层判据：
+
+| 层 | 证据 | 说明 |
+| --- | --- | --- |
+| 1 | 根 `package.json` 的 `scripts` 对象 | 逐条解析后建立「脚本文件 → npm script 名」的双向映射。直接对 `package.json` 原文做字符串包含会误命中（`build` 会命中 `build:lib`），必须解析成对象再比对值 |
+| 2 | `.github/workflows/*.yml` 全文 | 同时搜 npm script 名与文件路径，因为少数 workflow 直接 `bash scripts/xxx.sh` |
+| 3 | `scripts/run-gates.ts` 的调用表 | `pnpmScript(label, 'npm-script-name')` 与 `pnpmExec(...)`；门禁是绝大多数脚本的唯一触发点 |
+| 4 | 其它脚本的 `import` 与配置文件路径数组 | 库模块没有独立入口，只能靠引用方存活；`vitest*.config.ts` 里还有一批以字符串路径登记的插件文件 |
+
+补充：`vitest.config.ts` 的 `testIncludes` 含 `'scripts/**/*.spec.ts'`，因此第二十节 20.14 登记的 160 个根目录测试文件由常规 `pnpm test` 覆盖，**不属于**失效范畴，本文不把它们列入下表。
+
+### 21.2 结论一：没有「零引用」文件
+
+四个看起来零引用的文件都查到了动态契约：
+
+| 文件 | 承接方 | 证据 |
+| --- | --- | --- |
+| `coverage-uncovered-locations.cjs` | `vitest.config.ts` | 第 16 行 `fileURLToPath(new URL('./scripts/coverage-uncovered-locations.cjs', import.meta.url))`，作为覆盖率 location reporter 传给 vitest |
+| `test-dom-environment.ts` | `vitest.config.ts` | 第 205 / 225 / 245 行三处环境声明数组中的字符串路径 |
+| `test-proxy-environment.ts` | `vitest.config.ts` | 同上，与 `test-dom-environment.ts` 并列出现 |
+| `session-snapshot-corpus.corpus.ts` | `vitest.snapshot.config.ts` | 第 52 行 `'scripts/session-snapshot-corpus.corpus.ts'`，作为快照语料清单 |
+
+因此**不能**以「搜不到 import」为由删除任何 `scripts/` 文件。
+
+### 21.3 结论二：17 个有入口、但门禁与 CI 都不调用
+
+下表文件都有自己的 npm script 或 import 引用，但两者既不在 `run-gates.ts` 的调用表里，也没出现在任何 workflow 中。它们是**人工/本地入口**，不是死代码，但也不受 CI 保护（`translation-brief.ts` 属 import-only，列在此处是为了避免被误判为孤立文件）。
+
+| 文件 | 类型 | 行数 | 职责与处置建议 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `publish-npm-baseline.ts` | ts | 1070 | 入口 `publish:npm-baseline`。本机一次性发布脚本：pack 与 publish 在同一进程完成，需人工认证与重试，且排除 vendor。[npm-release-sequences Agent Note](../../../.agents/notes/implemented/process/2026-08-10-npm-release-sequences.md) 明确记录「不能作为 CI 发布基础」，其 tarball 校验与已安装产物探针已被搬运复用。结构：包选择与版本约束 → 安装与解析 → 基线写盘与差异报告。**建议保留并标注「仅本机」** | 结构判断 |
+| `gen-third-party-notices.ts` | ts | 884 | 入口 `gen-third-party-notices` / `--check` 版 `verify-third-party-notices`。生成 `THIRD_PARTY_NOTICES.md`；虽然不在 CI 直接调用，但 `gen-third-party-notices.spec.ts` 在测试 lane 断言「已提交字节与生成结果一致」，属于**间接门禁**。结构：输入收集（workspace 依赖 + 官方 payload + Python 发行版）→ 许可证解析 → 排序去重渲染 | 结构判断 |
+| `install-lefthook.mjs` | mjs | 769 | 入口 `postinstall`，`pnpm install` 后自动执行，因此永远不会「没人调用」；同时被 `docs/development.md` 记为手工重装方式。结构：worktree 探测 → hook 路径安全校验 → 钩子写入或降级提示 | 结构判断 |
+| `benchmark-npm-resolution.ts` | ts | 553 | 入口 `benchmark:npm-resolution`，但同时被 `verify-npm-install-layout.ts`（第 11 行）与 `gen-dependency-catalog.ts`（第 8 行）import，实际是「基准 + 共享工具库」双重身份。**不可删**。结构：包选择 → 隔离安装 → 解析耗时/内存采样 → 汇总输出 | 结构判断 |
+| `translation-brief.ts` | ts | 512 | 无独立 npm 入口，被 `gen-translation-brief.ts` import；职责见 20.x 翻译工具组。**属于库模块，不在清理范围** | 结构判断 |
+| `benchmark-next-package-dependency.ts` | ts | 271 | 入口 `benchmark:npm-resolution:next`。对照组基准，验证下一代依赖解析策略；仅本机跑，无门禁。**保留，标注实验性** | 结构判断 |
+| `change-scope.ts` | ts | 248 | 入口 `change-scope`。按 git 变更路径推算受影响门禁集合；调用方是 `.agents/skills/dsh-pre-push-checks/SKILL.md` 的推前检查流程，属**人工工作流入口**，非 CI | 结构判断 |
+| `persistence-review.ts` | ts | 230 | 入口 `persistence-review`。持久化 schema 变更的评审摘要工具，调用方是 `docs/cookbook/reviewing-persistence-type-changes*.md` 的双语手册。**保留** | 结构判断 |
+| `dev-bundle-registry.ts` | ts | 173 | 入口 `dev:bundle-registry`。开发态 bundle 注册表写入工具；[build-artifacts-check-split Agent Note](../../../.agents/notes/implemented/process/2026-10-11-build-artifacts-check-split.md) 把它列为需要 `build` 先行的消费者。**保留** | 结构判断 |
+| `run-memory-pressure-bench.ts` | ts | 147 | 入口 `test:bench:memory`，在 4/8 GiB 无 swap 的 cgroup 中重跑固定基准清单，见 [memory-limited-benchmarks Agent Note](../../../.agents/notes/implemented/testing/2026-10-07-memory-limited-benchmarks.md)。**保留** | 结构判断 |
+| `verify-v3-event-vocabulary.ts` | ts | 105 | 入口 `verify-v3-event-vocabulary`，只在 `docs/cookbook/adding-a-session-format-version*.md` 中作为一次性校验步骤出现。**待确认**：是否有意从门禁移除（若 v3 已冻结，此脚本可归档） | 待确认 |
+| `run-bench-suite.ts` | ts | 70 | 入口 `test:bench:built`（`test:bench` 的第二段）。**注意**：`run-gates.ts` 的 `ci-bench` lane 走的是 `run-ci-bench.ts`，不是本文件，两者不要混淆 | 结构判断 |
+| `gen-translation-brief.ts` | ts | 331 | 入口 `gen-translation-brief`，被 `.agents/skills/dsh-translate-docs/SKILL.md` 作为翻译工作流命令引用，属人工/agent 工作流 | 结构判断 |
+| `migrate-sessions-to-v4.ts` | ts | 303 | 入口 `migrate:sessions-to-v4`。一次性会话格式迁移，`migrate-sessions-to-v4.spec.ts` 仍覆盖其 `runMigrationJobs` 与 `--help`。迁移窗口结束后可连同 spec 一起归档。**待确认归档时点** | 结构判断 |
+| `migrate-packed-session-fixtures.ts` | ts | 21 | 入口 `migrate:packed-session-fixtures`。21 行的薄封装，把已有 packed 夹具批量转成新格式，属一次性脚本 | 结构判断 |
+| `gen-cordis-api.ts` | ts | 9 | 入口 `gen-cordis-api` / `verify-cordis-api`。**精读全文**：9 行兼容壳，注释写明「Compatibility entry point for the unified Typert-backed Cordis catalog projection」，正文只有 `import { main } from './gen-cordis-catalog.ts'` 加一次 `main()`。`gen-cordis-inspect-catalog.ts` 生成物的 banner 里仍保留本命令名（第 75–76 行做字符串替换），说明它是一条影子入口。**建议保留**：删掉会让已发布的生成物 banner 指向不存在的命令 | 精读 |
+| `demo-ptc.mjs` | mjs | 19 | 入口 `demo:ptc`，同时被 `verify-application-entrypoints.ts`（第 58 行）登记为必须存在的 `dsh-wrapper`，门禁会校验它启动的是 `apps/cli/src/bin.ts` 而不是包入口。**间接门禁，不可删** | 结构判断 |
+
+### 21.4 处置建议汇总
+
+| 分组 | 文件 | 建议 |
+| --- | --- | --- |
+| 间接门禁（删了会挂） | `gen-third-party-notices.ts`、`demo-ptc.mjs`、`benchmark-npm-resolution.ts`、`translation-brief.ts`、`install-lefthook.mjs` | 保留，不清理 |
+| 人工工作流入口 | `change-scope.ts`、`persistence-review.ts`、`gen-translation-brief.ts`、`dev-bundle-registry.ts`、`publish-npm-baseline.ts` | 保留，建议在 `scripts/AGENTS` 类文档里集中登记「哪个 skill / cookbook 在用它」 |
+| 本地基准 | `benchmark-next-package-dependency.ts`、`run-bench-suite.ts`、`run-memory-pressure-bench.ts` | 保留；`run-ci-bench.ts` 才是 CI 路径 |
+| 一次性迁移 | `migrate-sessions-to-v4.ts`、`migrate-packed-session-fixtures.ts` | 迁移窗口关闭后归档（含 spec） |
+| 待确认 | `verify-v3-event-vocabulary.ts` | 先确认 v3 是否已冻结；若已冻结，转归档 |
+| 兼容壳 | `gen-cordis-api.ts` | 保留（生成物 banner 依赖命令名存在） |
+
+**本节统计**：本节为横向可达性分析，**不新增清单覆盖计数**（所涉 21 个文件均在第二十节登记过）。表格共 27 行（21.2 四条、21.3 十七条、21.4 六条）；`精读` 1（`gen-cordis-api.ts` 全文 9 行）、`结构判断` 19、`待确认` 1。结论：**0 个文件完全无引用，无一可直接删除**。
+
+## 二十二、vendor（81 个）
+
+Cordis 框架及其基础库的**源码内嵌副本**。它们不走 npm 依赖，而是作为 pnpm workspace 成员（`vendor/*`）参与构建，理由写在 [vendor/README.md](file:///D:/ai/deepseek/i-do/vendor/README.md) 首段：让 harness 完整拥有框架层，做到可审计、可打补丁、可钉版本。
+
+三条全局约定，改这批文件前必须知道：
+
+1. **不要随手改 `vendor/*/src/`**。每一处与上游的偏离都必须在 `vendor/README.md` 的「Local modifications」里登记，带稳定编号（当前下一个编号是 V28），且编号不得复用。`tsconfig.json` 是例外——它们按单体仓库的构建形状重新生成，允许因类型检查策略调整而改动。
+2. **构建时才重命名作用域**。所有包都以 `@deepseek-ai` 作用域发布（`cordis` → `@deepseek-ai/cordis`，`@cordisjs/plugin-loader` → `@deepseek-ai/cordis-plugin-loader`），由 `scripts/rescope-vendor.ts` 统一改写，门禁侧对应 `pnpm rescope-vendor --check`。同步上游后要重新执行 `pnpm run rescope-vendor --apply`，否则包名与引用会分叉。
+3. **上游同步是「覆盖 + 重放」**：按 manifest 表里的 commit 检出上游，拷 `src/`（以及变化了的 `bin.js`/`README.md`/`LICENSE`），再逐条重放本地修改；上游已修好的条目要在日志里删除而不是留着。
+
+九个包的分工与文件见下。每个包的 `LICENSE` 均为上游 MIT 原文 21 行、内容一致，本节不逐条登记，按每包 1 条合并计入覆盖（共折 9 条）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `AGENTS.md` | md | 7 | 给 agent 的目录级约束：禁止随意改 `src/`，偏离必须登记到 README 的修改日志 | 精读 |
+| `CLAUDE.md` | md | 1 | 只写 `AGENTS.md` 一行，作为其他工具的入口重定向 | 精读 |
+| `README.md` | md | 67 | 本目录的权威文档：manifest（目录 / npm 名 / 上游名 / 版本 / 仓库 / commit）、V1–V27 本地修改日志、resolver adaptations、五步同步流程 | 精读 |
+
+### 22.1 cordis（14 个）
+
+框架内核：上下文树、生命周期、事件、注册表、服务与反射。`Fiber` 是并发卸载与重入释放的核心，本地有三处加固（V6）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `bin.js` | js | 16 | 极薄的 CLI 垫片，把命令转给 `src/` 的导出，供上游的 `cordis` 可执行名使用 | 结构判断 |
+| `package.json` | json | 51 | 作用域名与发布元数据；`files` 含 `src`（V16，否则 export map 会指向 tarball 里不存在的文件） | 结构判断 |
+| `README.md` | md | 115 | 上游框架概念文档（Context / Fiber / Service / Effect），保留原文 | 结构判断 |
+| `src/context.ts` | ts | 146 | `Context` 类与其接口：服务注册、插件声明、子上下文派生；本地补了 `@param`/`@returns` 契约注释（V7） | 结构判断 |
+| `src/events.ts` | ts | 371 | `EventsService`：`on`/`emit`/`waterfall`/`bail`/`parallel` 的分发与短路语义 | 结构判断 |
+| `src/fiber.ts` | ts | 820 | 生命周期引擎：fiber 状态机、effect 收集与逆序释放、重入卸载。**结构**：前段状态与 effect 容器 → 中段 setup/dispose 交错规则 → 后段父子 fiber 与依赖声明。本地加固见 V6（setup 期间开始的卸载会等待 setup 与其清理；`UNLOADING` 期拒绝新建 effect） | 结构判断 |
+| `src/index.ts` | ts | 16 | 包入口，再导出 `Context`、服务与类型，决定框架对外的公共面 | 结构判断 |
+| `src/logger.ts` | ts | 276 | `LoggerService`：分级日志、命名空间与下游 sink 的注册点 | 结构判断 |
+| `src/reflect.ts` | ts | 436 | `ReflectService`：跨上下文显式查找服务/插件，处理隔离边界 | 结构判断 |
+| `src/registry.ts` | ts | 337 | `RegistryService`：插件条目的注册与依赖解析表 | 结构判断 |
+| `src/service.ts` | ts | 115 | `Service` 基类：服务实例的注入与生命周期绑定 | 结构判断 |
+| `src/utils.ts` | ts | 294 | 内部工具：可迭代清理、错误聚合、类型守卫 | 结构判断 |
+| `tsconfig.json` | json | 23 | 按单体仓库形状重新生成（V3）：继承根 `tsconfig.base.json`、产物进 `lib/types`、声明 project references | 结构判断 |
+
+### 22.2 cosmokit（11 个）
+
+框架的通用工具库，无框架依赖。V22 为它引入了「不可变引用」与 `deepEqual` 的引用语义，这是 volatile 配置机制的底座。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 32 | 作用域名与导出；无运行时依赖 | 结构判断 |
+| `README.md` | md | 30 | 上游工具库说明 | 结构判断 |
+| `src/index.ts` | ts | 12 | 聚合出口，按模块再导出 | 结构判断 |
+| `src/array.ts` | ts | 42 | 数组工具：分块、去重、稳定遍历 | 结构判断 |
+| `src/misc.ts` | ts | 78 | 杂项：`deepEqual`（严格模式按引用比较、数组逐槽、环保守处理、URL 按规范化 href）、不可变引用工具（V22） | 结构判断 |
+| `src/string.ts` | ts | 113 | 字符串工具：命名风格转换、转义与截断 | 结构判断 |
+| `src/time.ts` | ts | 92 | 时间格式化与时长解析 | 结构判断 |
+| `src/types.ts` | ts | 168 | 公共类型谓词与工具类型 | 结构判断 |
+| `src/volatile.ts` | ts | 86 | volatile（跨热重载保留）引用的枚举与提交机制，供 Schemastery 与 Loader 使用（V22） | 结构判断 |
+| `tsconfig.json` | json | 15 | 重新生成的单体仓库编译配置 | 结构判断 |
+
+### 22.3 group（5 个）
+
+Cordis 的 `Group` 插件在本仓库里的全部内容就是**一次再导出**——真正的实现住在 `loader` 的 `Group` 类里，本包只为保留上游的包名与导入路径。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 36 | 作用域名与对 `@deepseek-ai/cordis-plugin-loader` 的依赖 | 结构判断 |
+| `README.md` | md | 21 | 上游说明，指出 Group 用于把条目分层组织 | 结构判断 |
+| `src/index.ts` | ts | 3 | 全文只有 `import { Group } from '@deepseek-ai/cordis-plugin-loader'` 与 `export default Group`，是纯兼容壳 | 精读 |
+| `tsconfig.json` | json | 23 | 重新生成的编译配置 | 结构判断 |
+
+### 22.4 hmr（6 个）
+
+热重载提供方的实现。上游依赖的 YAML i18n 钩子没有内嵌，因此本地删掉了 `src/locales/`（V1）；模块监听的真实路径与就绪时序也有本地修正（V9）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 59 | 作用域名；`esbuild` 为直接 dev 依赖（只为 `BuildFailure` 类型） | 结构判断 |
+| `README.md` | md | 51 | 上游说明：文件变更 → 重载条目 → 报告构建失败 | 结构判断 |
+| `src/index.ts` | ts | 428 | HMR 主体：监听配置与模块、realpath 归一（Windows 短名/别名，V9）、`ignoreInitial` 避免启动自触发、成功后替换模块命名空间 | 结构判断 |
+| `src/error.ts` | ts | 36 | `BuildFailure` 类型的来源与失败日志格式化（V7 补了注释） | 结构判断 |
+| `tsconfig.json` | json | 35 | 重新生成的编译配置，含 `esbuild` 类型引用 | 结构判断 |
+
+### 22.5 include（7 个）
+
+`include` 插件负责把外部文件当作条目树的一层「追加配置」载入，并维护一份写盘日志。本地改动集中在持久化语义上（V11 导出修补算法与 `!!js` 方言；V14 让 `flush()`/`stop()` 对未保存变更报错而非静默丢弃）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 40 | 作用域名与对 loader 的依赖 | 结构判断 |
+| `README.md` | md | 53 | 上游说明：Include 的条目来源、刷新与补丁语义 | 结构判断 |
+| `src/index.ts` | ts | 465 | Include 插件主体：加载条目、合并补丁、刷新子条目。导出上游 `applyPatches` 为 `applyEntryPatches`、`!!js` 方言为 `entryListSchema`，供 `dsh --dump-config` 复用同一算法（V11） | 结构判断 |
+| `src/journal.ts` | ts | 242 | 写盘日志：记录对宿主配置文件做过的补丁，供 `flush()` 重试与冲突检测（V14） | 结构判断 |
+| `src/patch.ts` | ts | 261 | 补丁算法本体的移植，处理条目的增删改与顺序 | 结构判断 |
+| `tsconfig.json` | json | 27 | 重新生成的编译配置 | 结构判断 |
+
+### 22.6 loader（14 个）
+
+条目树的加载器：读配置、解析插件、维护 `EntryTree`、决定重挂还是原地更新。本地改动最多——V22 的 volatile 更新、V23 的模块命名空间保留、V25 的生命周期适配、V26/V27 的两个 tree 修正，另有 resolver 的两处适配（浏览器 external 与包作用域缓存键）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | --- | --- | --- |
+| `package.json` | json | 45 | 作用域名；对 `@deepseek-ai/schemastery` 的类型依赖（V22 新增）与 `node-addon-require-builtin` 版本约束 | 结构判断 |
+| `README.md` | md | 71 | 上游说明 + 本地追加：`moduleNamespace` 字段与 volatile 更新行为 | 结构判断 |
+| `src/index.ts` | ts | 219 | Loader 插件入口：持有 `EntryTree`、转发配置、声明 `loader/volatile-update` 事件 | 结构判断 |
+| `src/internal.ts` | ts | 144 | 内部符号与跨模块共享的私有约定 | 结构判断 |
+| `src/resolve.ts` | ts | 75 | 模块解析：浏览器外部化用默认导入、包作用域缓存键按 `path.resolve()` 归一 | 结构判断 |
+| `src/config/diff.ts` | ts | 45 | `equalExceptVolatile`：递归跳过固定 volatile 路径的严格比较，只做纯函数判断、不执行配置钩子（V22） | 结构判断 |
+| `src/config/entry.ts` | ts | 239 | `Entry`：配置更新、重挂、volatile 提交（`_commitVolatile` 走 `Fiber.resolveConfig()`），并保留 `moduleNamespace`（V23） | 结构判断 |
+| `src/config/group.ts` | ts | 89 | `Group` 条目：分组容器，真正的类定义在此，`vendor/group` 只是再导出 | 结构判断 |
+| `src/config/isolate.ts` | ts | 176 | 隔离域：为条目提供独立的模块/服务视图，含 `declare module './entry.ts'` 的类型扩展（V4） | 结构判断 |
+| `src/config/tree.ts` | ts | 205 | `EntryTree`：条目增删改与跨树移动；本地修了跨树移动的注册迁移（V26，回挪上游 #271）并允许显式 id 含 `:`（V27） | 结构判断 |
+| `src/config/utils.ts` | ts | 32 | 配置层的小工具 | 结构判断 |
+| `tsconfig.json` | json | 27 | 重新生成的编译配置 | 结构判断 |
+| `tsdown.config.ts` | ts | 16 | 本仓库自有的打包形状覆盖（V5 同类），上游没有此文件 | 结构判断 |
+
+### 22.7 logger-console（8 个）
+
+把框架日志写到控制台。拆了 Node 与浏览器两个入口，是九个包里唯一有双产物形状的。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 42 | 作用域名；条件导出区分 node/browser | 结构判断 |
+| `README.md` | md | 35 | 上游说明：日志级别与输出格式 | 结构判断 |
+| `src/index.ts` | ts | 28 | Node 入口：拼接输出、注册 sink | 结构判断 |
+| `src/browser.ts` | ts | 17 | 浏览器入口：降级到 `console`，不引入 Node 专有模块 | 结构判断 |
+| `src/shared.ts` | ts | 100 | 两端共用的格式化（级别着色、命名空间前缀） | 结构判断 |
+| `tsconfig.json` | json | 26 | 重新生成的编译配置 | 结构判断 |
+| `tsdown.config.ts` | ts | 24 | 自有打包覆盖：ESM+CJS 双输出、node/browser 分离入口（V5） | 结构判断 |
+
+### 22.8 schemastery（6 个）
+
+配置 schema 库，整包只有一个 962 行的实现文件。V22 为它加了 `.volatile()`、可选/默认值推断、序列化元数据与引用感知的 `simplify`，是配置热重载能保留引用的关键。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 39 | 作用域名；`type: module` + 条件导出（V10，避免并发导入落到 CJS 入口引发 `ERR_REQUIRE_ESM_RACE_CONDITION`） | 结构判断 |
+| `README.md` | md | 393 | 上游 API 文档，本地补了 volatile 与默认值推断章节 | 结构判断 |
+| `src/index.ts` | ts | 962 | 全部实现：schema 构造器、校验、`simplify`/`unparse`、volatile 节点与序列化。**结构**：前段类型与 `Schema` 类 → 中段各基本类型的解码/校验 → 后段组合子、默认值与序列化 | 结构判断 |
+| `tsconfig.json` | json | 21 | 重新生成的编译配置 | 结构判断 |
+| `tsdown.config.ts` | ts | 17 | 自有打包覆盖（V5 同类） | 结构判断 |
+
+### 22.9 timer（7 个）
+
+基于框架生命周期的定时器服务，条目卸载时自动清理。上游包没有 README，本地这份是自写的；`locale/` 两个 json 是本仓库新增（V24）。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 40 | 作用域名；导出并发布 `locale/` 资源 | 结构判断 |
+| `README.md` | md | 38 | 本地撰写的说明（上游无 README）：`setTimeout`/`setInterval` 的生命周期绑定 | 结构判断 |
+| `src/index.ts` | ts | 153 | `TimerService`：定时注册、句柄回收、卸载时批量清理 | 结构判断 |
+| `locale/en.json` | json | 5 | 设置页插件清单里的英文标题与描述（V24） | 结构判断 |
+| `locale/zh.json` | json | 6 | 同上中文版 | 结构判断 |
+| `tsconfig.json` | json | 23 | 重新生成的编译配置 | 结构判断 |
+
+**第二十二节小计**：覆盖 81 个文件，表格 72 行，折叠 9 条（九个包各有一份内容相同的上游 `LICENSE`，每包并 1 条）。校验：72 + 9 = 81 ✓。`精读` 4（`AGENTS.md`、`CLAUDE.md`、`README.md`、`group/src/index.ts`）、`结构判断` 68、`待确认` 0。校验：4 + 68 = 72 ✓。
+
+## 二十三、website（37 个）
+
+文档站适配层，包名 `@deepseek-ai/website`，private、`type: module`、版本 `0.0.1`。它**不持有任何文档正文**：正文仍在各层自己的 `docs/` 目录，`website/docs.ts` 是一份发布清单，把选定页面投影成两套 locale 的路由树，投影产物写在被忽略的 `.generated/`。构建产物 `.dist/` 里除了 HTML，还有每条路由的 raw-Markdown 孪生（URL 去掉尾斜杠加 `.md`）与根级 `llms.txt`，两者都在构建时由清单推导，从不落盘成源文件。
+
+三个根 `package.json` 入口决定它何时被调用：`docs:dev`（`vitepress dev .`，127.0.0.1:5173）、`docs:build`（`tsx website/build.ts` 串 `verify-doc-site-fragments`）、`docs:check`（先跑 8 个 spec，再跑 `docs:build`）。`run-gates.ts` 在 `windows-site` 门禁里用 `pnpmScript('windows-site', 'docs:build')` 调用，文档构建默认走 MPA 变体（第 524 行 `docsBuildScript: 'docs:build:mpa'`、第 849 行 `docs-site-build`）。因此改这一棵子树必须能过 `pnpm docs:check`，它同时拒绝 `website/` 下新增未忽略的 Markdown。
+
+### 23.1 顶层文件（6 个）
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `package.json` | json | 24 | 声明 `@deepseek-ai/website`、三条 scripts（`dev`/`build`/`preview`）与 vitepress、mermaid、panzoom、cytoscape 等 12 个 devDependencies | 精读 |
+| `AGENTS.md` | md | 25 | 本子树的唯一维护型 Markdown，规定「内容不进这棵树」、`.generated/`/`.cache/`/`.dist/` 不得编辑提交、输出目录清理的三条安全约束，以及各查看器的行为边界 | 精读 |
+| `build.ts` | ts | 86 | 生产构建入口，包装 `vitepress build`：`cleanDocSiteOutput` 在 VitePress 解析出 `outDir` 后、写文件前删掉旧产物，并要求该目录的词法路径与最近已存在的父目录 realpath 都不逃出站点根；符号链接形态的输出只 `unlink` 不递归；CLI 侧只接受零参数或 `--mpa` | 精读 |
+| `docs.ts` | ts | 599 | 发布清单：`DocsPage` 描述每页的 locale、源 Markdown 路径、路由、侧栏归属与排序、outline 深度、`sourceAliases`（目录型 index 页的别名）；`MirroredPage`/`PairedPage` 区分「同源投两套 locale」与「`foo.md`/`foo.zh.md` 成对」，后者缺译文时两条路由都投影已有源，不做复制 | 结构判断 |
+| `raw-markdown.ts` | ts | 52 | 开发服务器中间件，把 `.md` 路由与 `llms.txt` 以原文返回；靠 `sec-fetch-dest` 把脚本 import 让回 Vite，只有带 `dsh-raw=1` 的显式请求才 404 未发布路径 | 精读 |
+| `.gitignore` | gitignore | 4 | 忽略 `.generated/`、`.cache/`、`.dist/` 与 node_modules | 结构判断 |
+
+### 23.2 `.vitepress`（13 个）
+
+站点配置与主题扩展。配置侧在模块顶层直接执行 `projectDocs()`，即「import 即投影」，因此任何加载配置的动作都会先刷新 `.generated/`。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `config.ts` | ts | 386 | VitePress 主配置：按 `orderedPages` 分组成侧栏（只有显式给 `collapsed` 才渲染可折叠，展开的组必须省略该键）、导航栏与 guide 侧栏共用模块链接、中英双 locale、注入 Mermaid 插件与 raw-markdown 中间件 | 结构判断 |
+| `code-groups.ts` | ts | 34 | 两件事：`codeGroupFallbackHead` 在 MPA 构建里补一段样式，把所有命令块摊开并隐藏不可用的 tab 与复制按钮；`isolateCodeGroupRadios` 劫持 `container_code-group_open` 渲染规则，把原生 tab 条包进独立 `<form>`，避免搜索摘要清掉页面上的平台选择 | 精读 |
+| `theme/index.ts` | ts | 70 | 主题入口，`extends: DefaultTheme` 并重写 Layout：挂载时创建 `DocumentTables`、延迟 `import()` 三个查看器、校正 hydration 插入控件后的初始 hash 位置；`onContentUpdated` 刷新表格、`watch` 路由/语言/主题刷新图表与图片、卸载时统一 dispose；`doc-before` 槽按 frontmatter 的 `rawMarkdownPath` 决定是否渲染 Markdown 动作条 | 精读 |
+| `theme/media-viewer.ts` | ts | 232 | 图表与图片共用的全屏模态：pan/zoom 控制器、焦点管理、滚动锁、中英文案与键盘/滚轮交互 | 结构判断 |
+| `theme/mermaid-viewer.ts` | ts | 98 | Mermaid 图表查看器，负责 SVG 隔离与「源 SVG 被替换即关闭当前视图」 | 结构判断 |
+| `theme/image-viewer.ts` | ts | 127 | 独立内容图片查看器；只接管「已加载、alt 非空、独占段落」的图片，行内、链接、装饰性与 `data-no-zoom` 保持原交互，100% 按钮暴露原始尺寸 | 结构判断 |
+| `theme/page-markdown-actions.ts` | ts | 215 | 当前页 Markdown 动作条（复制/查看），每个实例只拥有自己页面的请求；复制走 `?dsh-raw=1`，状态机含 `copying`/`copied`/`requestFailed`/`clipboardFailed` | 结构判断 |
+| `theme/table-filter.ts` | ts | 171 | 长表格（≥10 数据行）的文本筛选与页面滚动表头；匹配可见单元格文本、忽略大小写与首尾空格，清空后恢复原始行与链接顺序 | 结构判断 |
+| `theme/media-viewer.css` | css | 149 | 共享模态的布局、层级与焦点样式 | 结构判断 |
+| `theme/page-markdown-actions.css` | css | 144 | 动作条样式 | 结构判断 |
+| `theme/table-filter.css` | css | 100 | 筛选控件与吸顶表头样式 | 结构判断 |
+| `theme/code-group.css` | css | 10 | code-group tab 条与复制按钮的基础样式修正 | 结构判断 |
+| `theme/css.d.ts` | ts | 2 | 声明 `*.css` 模块的类型，让 `import './x.css'` 通过 tsc | 结构判断 |
+
+### 23.3 `public`（2 个）
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `favicon.svg` | svg | 13 | 站点图标，VitePress 原样拷贝到产物根 | 结构判断 |
+| `wordmark.svg` | svg | 15 | 页头品牌字标 | 结构判断 |
+
+### 23.4 `tests`（16 个）
+
+6 个 spec 全部由根 `docs:check` 显式点名执行（`scripts/project-doc-site.spec.ts` 与 `scripts/verify-doc-site-fragments.spec.ts` 也在同一串里，但不属本清单）。10 个 `tests/expected/*.html` 是主题渲染的期望产物，中英各一份，按被测对象成对折叠成 5 行。
+
+| 文件 | 类型 | 行数 | 职责 | 标注 |
+| --- | --- | ---: | --- | --- |
+| `tests/page-markdown-actions.spec.ts` | ts | 479 | 被测对象 `theme/page-markdown-actions.ts`：复制与查看两类请求的发送、状态迁移、失败分支与组件生命周期 | 结构判断 |
+| `tests/image-viewer.spec.ts` | ts | 350 | 被测对象 `theme/image-viewer.ts`：哪些图片被接管、alt/段落/`data-no-zoom` 的筛选条件、打开关闭与 100% 尺寸 | 结构判断 |
+| `tests/mermaid-viewer.spec.ts` | ts | 274 | 被测对象 `theme/mermaid-viewer.ts`：异步渲染图表的接入、SVG 替换时自动关闭 | 结构判断 |
+| `tests/table-filter.spec.ts` | ts | 249 | 被测对象 `theme/table-filter.ts`：10 行阈值、大小写与空格归一、清空还原、控件与吸顶表头生命周期 | 结构判断 |
+| `tests/raw-markdown.spec.ts` | ts | 83 | 被测对象 `raw-markdown.ts`：`sec-fetch-dest` 分流、`dsh-raw=1` 的 404 语义、`llms.txt` 与 `.md` 的 Content-Type | 结构判断 |
+| `tests/code-groups.spec.ts` | ts | 71 | 被测对象 `code-groups.ts`：MPA 兜底样式是否注入、`<form>` 包裹是否命中预期标记 | 结构判断 |
+| `tests/expected/image-viewer.{en-US,zh-CN}.html` | html | 3 + 3 | 图片查看器两种语言的期望 HTML 快照（各 3 行、字节数 2,304 / 2,293） | 结构判断 |
+| `tests/expected/page-markdown-actions.{en-US,zh-CN}.html` | html | 1 + 1 | 动作条两种语言的期望 HTML（1,114 / 1,118 B） | 结构判断 |
+| `tests/expected/page-markdown-menu.{en-US,zh-CN}.html` | html | 1 + 1 | 动作条展开菜单的期望 HTML（3,035 / 3,077 B），与上一行同属 `page-markdown-actions` 的两个渲染态 | 结构判断 |
+| `tests/expected/page-markdown-static.{en-US,zh-CN}.html` | html | 1 + 1 | 动作条静态态的期望 HTML（498 / 519 B） | 结构判断 |
+| `tests/expected/table-filter.{en-US,zh-CN}.html` | html | 1 + 1 | 表格筛选控件的期望 HTML（283 / 289 B） | 结构判断 |
+
+**第二十三节小计**：覆盖 37 个文件，表格 32 行，折叠 5 条（`tests/expected/` 的 10 个 HTML 按被测对象成对折成 5 行）。校验：32 + 5 = 37 ✓。`精读` 6（`package.json`、`AGENTS.md`、`build.ts`、`raw-markdown.ts`、`code-groups.ts`、`theme/index.ts`）、`结构判断` 26、`待确认` 0。校验：6 + 26 = 32 ✓。
+
+## 二十四、对账与异常
+
+本节只做核算，不新增覆盖。三张表分别回答：清单行数对不对得上、证据强度如何分布、哪些文件值得单独盯。
+
+### 24.1 覆盖对账
+
+清单侧实测：`packages-07.tsv` 771 个数据行、`misc.tsv` 914 个数据行，合计 **1,685**。文档侧表格 1,281 行，折叠 404 条，1,281 + 404 = 1,685 ✓。
+
+| 节 | 目录 / 分组 | 清单文件数 | 表格行数 | 折叠条数 | 校验 |
+| --- | --- | ---: | ---: | ---: | --- |
+| 五 | `packages/test-support` | 226 | 114 | 112 | 114 + 112 = 226 ✓ |
+| 六 | `packages/todo` | 23 | 12 | 11 | 12 + 11 = 23 ✓ |
+| 七 | `packages/typert` | 118 | 66 | 52 | 66 + 52 = 118 ✓ |
+| 八 | `packages/util` | 210 | 162 | 48 | 162 + 48 = 210 ✓ |
+| 九 | `packages/web` | 109 | 62 | 47 | 62 + 47 = 109 ✓ |
+| 十 | `packages/workflow` | 63 | 41 | 22 | 41 + 22 = 63 ✓ |
+| 十一 | `packages/workspace` | 22 | 11 | 11 | 11 + 11 = 22 ✓ |
+| 十三 | 根目录散落文件 | 48 | 40 | 8 | 40 + 8 = 48 ✓ |
+| 十四 | `.claude` / `.ssh` / `.trae` | 8 | 8 | 0 | 8 + 0 = 8 ✓ |
+| 十五 | `.github` | 67 | 63 | 4 | 63 + 4 = 67 ✓ |
+| 十六 | `benchmarks` | 48 | 40 | 8 | 40 + 8 = 48 ✓ |
+| 十七 | `native` | 79 | 46 | 33 | 46 + 33 = 79 ✓ |
+| 十八 | `patches` | 12 | 12 | 0 | 12 + 0 = 12 ✓ |
+| 十九 | `python` | 69 | 57 | 12 | 57 + 12 = 69 ✓ |
+| 二十 | `scripts` | 465 | 443 | 22 | 443 + 22 = 465 ✓ |
+| 二十二 | `vendor` | 81 | 72 | 9 | 72 + 9 = 81 ✓ |
+| 二十三 | `website` | 37 | 32 | 5 | 32 + 5 = 37 ✓ |
+| — | **合计** | **1,685** | **1,281** | **404** | **1,281 + 404 = 1,685 ✓** |
+
+分组小计也对得上：`packages-07` = 771（第五～十一节 468 行 + 303 条折叠）；`misc` = 914，其中第十三～十九节 331 个（266 行 + 65 条折叠）、第二十节 465（443 + 22）、第二十二节 81（72 + 9）、第二十三节 37（32 + 5）。
+
+第二十一节（疑似失效脚本）是横向可达性分析，所涉 21 个文件已在第二十节登记，本节不计入覆盖。
+
+### 24.2 标注分布
+
+| 标注 | 表格行数 | 占比 | 说明 |
+| --- | ---: | ---: | --- |
+| `精读` | 25 | 1.95% | 集中在 `patches`（12）、`website`（6）、`vendor`（4）、`python`（2）、根目录（1） |
+| `结构判断` | 1,239 | 96.71% | 主体；依据为路径、包 README、同名测试与调用点 |
+| `待确认` | 17 | 1.33% | 逐行为：根目录 3、`.trae` 1、`.github` 1、`benchmarks` 1、`scripts` 11 |
+| **合计** | **1,281** | 100% | — |
+
+按文件计，`精读` 覆盖 25 / 1,685 ≈ 1.48%。这个比例偏低是刻意的：本任务的产出是文件级索引，不是源码评审；凡没有真正打开正文的行，一律没有标 `精读`。`scripts` 一节 443 行全部是 `结构判断`，因为其职责靠「文件 → npm script 名 → `run-gates.ts` / workflow」两层映射确定，读正文并不会提高结论的可靠性。
+
+### 24.3 异常文件
+
+以下四类按「值得后续单独处理」筛选，不重复正文职责。
+
+**（1）超大文件**——行数或体积显著超出同类，阅读与审查成本高。
+
+| 文件 | 行数 / 字节 | 为什么标出来 |
+| --- | ---: | --- |
+| `pnpm-lock.yaml` | 34,860 / 1,219,598 | 全仓最大文本；锁文件冲突时不可手工合并，只能重生成 |
+| `scripts/dependency-catalog/package-lock.json` | 8,539 / 344,527 | 与根 `pnpm-lock.yaml` 并存的第二套锁文件，版本漂移风险点 |
+| `packages/typert/generator/tests/__snapshots__/type-model.spec.ts.snap` | 6,492 / 229,377 | 快照测试基线，模型形状一变即整文件重写 |
+| `scripts/snapshots/python-sdk-single-exe/advanced/result.json` | 4,936 / 127,650 | 快照夹具而非源码，属预期的大文件 |
+| `packages/typert/generator/src/analyzer.ts` | 3,471 / 152,018 | 本节最长的产品源码，类型模型分析的主要复杂度所在 |
+| `scripts/smoke-python-runtime.py` | 3,279 / 158,356 | 单文件冒烟脚本，跨语言维护 |
+| `scripts/type-equiv.manifest.json` | 2,962 / 91,254 | 数据清单，改动需整表复核 |
+| `packages/test-support/llm-replay/tests/llm-replay.spec.ts` | 2,317 / 99,890 | 测试文件超过 2 千行，失败定位成本高 |
+| `scripts/no-unknown-casts.baseline.json` | 1,957 / 106,682 | 基线只应递减，增长即意味着放宽门禁 |
+| `scripts/gen-doc-graphs.ts` | 1,941 / 88,099 | 生成器与产物渲染耦合在一个文件里 |
+| `scripts/ci-workflow.spec.ts` | 1,852 / 105,044 | 用测试守护 workflow 文本，规则密集 |
+| `scripts/run-gates.ts` | 1,762 / 77,190 | 门禁总调度，任何 gate 解析都要读它 |
+| `scripts/gen-cordis-catalog.ts` | 1,480 / 76,240 | Cordis 目录生成的唯一实现 |
+| `python/sdk/tests/test_client.py` | 1,203 | Python 侧最大测试文件 |
+| `patches/exceljs@4.4.0.patch` | 806 | 补丁本体接近源码量级，上游一升级就要重做 |
+| `patches/lexical@0.49.0.patch` | 58 / 647,960 | 行数少但字节极大：单行超长的打包产物整段替换，diff 不可读 |
+| `patches/@yao-pkg__pkg@6.21.0.patch` | 165 / 402,321 | 同上，针对 pkg 打包器的产物 | 
+
+**（2）疑似废弃 / 低价值存活**——不重复第二十一节的 17 条清单，只补三类「结构上可疑」。
+
+| 文件 | 现象 |
+| --- | --- |
+| `vendor/group/src/index.ts` | 3 行纯转发（`export default Group`），包的存在意义只在保留上游包名；删改都要连带 manifest |
+| `scripts/gen-cordis-api.ts` | 9 行兼容壳，真实现已迁到 `gen-cordis-catalog.ts`；只因生成物 banner 仍引用该命令名而保留 |
+| `scripts/translation-brief.ts` | 512 行，无 npm script 入口，靠 import 被调用；属「有代码无入口」的形态 |
+
+**（3）命名与风格不统一**——不是缺陷，但会让「按扩展名找脚本」的检索失效。
+
+| 现象 | 例子 |
+| --- | --- |
+| `scripts/` 下五种执行形态混放 | `.ts`（主流，经 `tsx`）、`.mjs`、`.cjs`（仅 `coverage-uncovered-locations.cjs`）、`.sh`（`wine-windows-gates.sh` 等门禁）、`.py`（`smoke-python-runtime.py`） |
+| 同一门禁两种实现风格 | `run-gates.ts` 里的 `pnpmScript` 间接调用 vs `wine-windows-gates.sh` 由 workflow 直接 `bash` 调用 |
+| 生成器与校验器靠命名配对 | `gen-*` / `verify-*` 成对出现，`--check` 只比对不落盘；配对关系没有任何清单文件登记，只能靠命名推断 |
+| Python 侧下划线命名 | `test_smoke_model.py`、`test_client.py` 属该语言惯例，**不**列为问题，此处仅说明与 TS 侧 kebab-case 的差异 |
+
+**（4）重复实现 / 双入口**——同一职责存在两条并行路径。
+
+| 对象 A | 对象 B | 关系 |
+| --- | --- | --- |
+| `scripts/run-ci-bench.ts`（`ci-bench`） | `scripts/run-bench-suite.ts`（`test:bench:built`） | 两套基准入口，前者进 CI，后者面向已构建产物；改基准口径必须同时看 |
+| `scripts/gen-cordis-catalog.ts` | `scripts/gen-cordis-api.ts` | 真实现 + 兼容壳，后者只转发 |
+| `scripts/gen-translation-brief.ts` | `scripts/translation-brief.ts` | 生成器与库函数拆分，前者写盘、后者被 import |
+| `patches/` 与 `vendor/` 的本地修改 | 补丁文件修三方依赖，vendor 内直接改源码 | 两种「改上游」的手段并存；vendor 的偏离必须登记 `vendor/README.md` 的 V 编号，补丁则靠文件名与 pnpm patch 机制追溯 |
+
+### 24.4 `packages/client/ui-theme` 交界核对
+
+按约定核对本份是否重复登记了该包的 9 个交界文件。结论：**没有重复登记，也没有漏登记，因为这 9 个文件根本不在本份的两张清单里**。
+
+- `packages-02.tsv` 含 9 行 `packages/client/ui-theme/*`：8 个 `locale/*.json` 加 `package.json`。
+- `packages-03.tsv` 含 64 行：`README` 三件套、`src/**`、`tests/**`、三份 `tsconfig*.json`、`tsdown.config.ts`。
+- `packages-07.tsv` 与 `misc.tsv` 对 `ui-theme` 的命中数均为 **0**；本文件全文对 `ui-theme` 的命中数也是 **0**。
+- 需要留意的一处同名干扰：`packages-07.tsv` 里有 3 行 `packages/typert/generator/tests/fixtures/type-model/packages/client/*`，那是 Typert 类型模型的测试夹具，路径里带 `packages/client` 但与被盘点的客户端包无关，已在第七节按夹具登记，不构成重复。
+
+### 24.5 最终报告
+
+**覆盖**：1,685 / 1,685，无遗漏行。`packages-07` 771 行、`misc.tsv` 914 行全部落到具体表格行或明确的折叠组；每一节的「清单文件数 = 表格行数 + 折叠条数」均已逐节校验通过。
+
+**证据强度**：`精读` 25（1.95%）、`结构判断` 1,239（96.71%）、`待确认` 17（1.33%）。`精读` 的分布偏斜是有意的——`patches`（12 个补丁全部读过 hunk 头与目标包）、`website`（6 个入口/中间件/渲染钩子）、`vendor`（4 个说明性文件与小入口），都是「读正文才能说准」的位置；`scripts`、`packages/*` 的绝大多数文件靠调用点推断已经足够，读正文只会增加成本而不增加确定性。
+
+**异常**：超大文件 17 个（最大 `pnpm-lock.yaml` 34,860 行）；疑似废弃 3 个结构可疑项，加上第二十一节 17 条「有入口但门禁与 CI 都不调用」，合计 20 个候选，其中 **0 个零引用**、无一可直接删除；命名风格 4 类；双入口 4 组。上游同步时优先看 `patches/` 与 `vendor/README.md` 的 V 编号——这两处是唯一「改了上游」的地方，也是升级最容易静默丢失的地方。
+
+**边界**：本文只做文件级索引，不重复 `docs/superpowers/modules/` 的架构分析；`packages/` 顶层散落文件属 `packages-01.tsv`，第八～十一节只覆盖 `packages-07` 内的四个分组。
+
+**改动范围**：本次盘点只新增本文件，未修改任何源码、配置或清单。收尾时 `git -C D:\ai\deepseek\i-do status --porcelain` 实测为：`M docs/superpowers/file-notes/packages-e-misc.md`（本文）、`?? .trae/`，以及 `M pnpm-lock.yaml`、`M website/package.json`、`M website/.vitepress/config.ts` 三处**非本任务产生**的既有改动（内容是为 Mermaid 懒加载补 `fastdom` 依赖与 Vite `optimizeDeps` 预打包），与本次只读盘点无关，未触碰。
