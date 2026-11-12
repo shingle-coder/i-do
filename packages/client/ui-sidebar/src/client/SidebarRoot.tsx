@@ -21,9 +21,9 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import clsx from 'clsx'
 import {
-  BrandMark, IconAppsAddOutlineRegular, IconNewChatOutlineMedium, IconNewChatOutlineRegular,
-  IconPanelLeftOutlineRegular, IconPinFillRegular, focusWithoutRing, isBehindModal, isDarwinDesktop, Menu, ShortcutKeys, Toast,
-  Tooltip, useModalLayer, writeClipboard,
+  IconAppsAddOutlineRegular, IconNewChatOutlineMedium, IconNewChatOutlineRegular,
+  IconPanelLeftOutlineRegular, IconPinFillRegular, focusWithoutRing, isBehindModal, isDarwinDesktop, Menu, ShortcutKeys,
+  Tooltip, useModalLayer,
 } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { InjectFace, PropsRenderFactories, PropsRenderSlots, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type {
@@ -44,16 +44,6 @@ const COLLAPSE_SETTLE_MS = 150
  * edge — on the way to the conversation, or around a portalled menu.
  */
 const SCROLLBAR_LINGER_MS = 2000
-
-/** Format complete-build metadata for the local brand badge. */
-function localBuildVersion(): string | undefined {
-  const version = process.env.DSH_CLIENT_VERSION
-  if (version === undefined) return undefined
-  const commit = process.env.DSH_CLIENT_COMMIT_HASH
-  return version
-    + (commit === undefined ? '' : `-${commit}`)
-    + (process.env.DSH_CLIENT_GIT_DIRTY === 'true' ? '-dirty' : '')
-}
 
 type PanelRowProps =
   Pick<SidebarPanelMetadata, 'id' | 'label'>
@@ -265,22 +255,9 @@ export function SidebarRoot({
     }
   }, [pointerInside])
 
-  const buildVersion = localBuildVersion()
-  // The local-build fallbacks copy the badge text; the brand button below
-  // skips New Session for clicks inside them. The click still bubbles, so
-  // document-level outside-click listeners see it.
-  // Each successful copy bumps the key so a repeated copy replays the toast.
-  const [copiedToast, setCopiedToast] = useState<number | null>(null)
-  const copyVersion = (version: string) => (): void => {
-    void writeClipboard(version).then((ok) => {
-      if (ok) setCopiedToast(seq => (seq ?? 0) + 1)
-    })
-  }
-
   const darwinDesktop = isDarwinDesktop()
-  // Rail resting state is the whale mark; hovering swaps in the panel icon
-  // (the expand affordance, figma sidebar-hover flow). Expanded it is a plain
-  // panel icon.
+  // Expanded and collapsed both show the plain panel icon; the rail no longer
+  // carries a brand mark.
   const toggle = (
     <Tooltip label={toggleLabel} shortcutKeys={shortcut?.keys} delayMs={500} side={captionTooltipSide} portal={drawer}>
       <button
@@ -292,11 +269,6 @@ export function SidebarRoot({
         aria-keyshortcuts={shortcut?.aria}
         onClick={() => { toggleSidebar() }}
       >
-        {!wide && !windowsTitlebar && (
-          <span className={css.railMark} aria-hidden="true">
-            {renderSlot('sidebar.brand.mark', { size: 24 }, { fallback: <BrandMark size={24} /> })}
-          </span>
-        )}
         {/* Rail icons render at 18 (figma rail spec); expanded keeps the glyph-native sizes. */}
         <IconPanelLeftOutlineRegular className={css.panelIcon} size={wide || windowsTitlebar ? 16 : 18} />
         {!wide && renderSlot('sidebar.toggle.badge', {})}
@@ -328,57 +300,6 @@ export function SidebarRoot({
           traffic lights and keeps the toggle at the sidebar's top-right. */}
       {darwinDesktop && <div className={css.topStrip} data-window-drag>{toggle}</div>}
       <div className={css.logoRow} data-window-drag>
-        {/* Expanded, the brand doubles as a New Session shortcut while the
-            access snapshot allows `session/create` — except on
-            macOS, where it stays part of the logo row's window-drag surface
-            (the drag-row controls rule would subtract a button);
-            the collapsed rail's logo is the expand toggle below instead.
-            Mouse clicks on the local-build fallbacks copy the version instead. */}
-        {wide && (() => {
-          const identity = (
-            <span className={css.brandIdentity} aria-hidden="true">
-              <span className={css.brandMark}>
-                {renderSlot('sidebar.brand.mark', { size: 24 }, {
-                  fallback: buildVersion === undefined
-                    ? <BrandMark size={24} />
-                    : (
-                      <span className={css.copyVersion} data-copy-version onClick={copyVersion(buildVersion)}>
-                        <BrandMark size={24} />
-                      </span>
-                    ),
-                })}
-              </span>
-              <span className={css.brandName}>
-                {renderSlot('sidebar.brand.name', {}, {
-                  fallback: buildVersion === undefined
-                    ? <span className={css.fallbackBrandName}>{t('brand.localBuild')}</span>
-                    : (
-                      <span className={clsx(css.localBuildBrand, css.copyVersion)} data-copy-version onClick={copyVersion(buildVersion)}>
-                        <span className={css.localBuildTitle}>{t('brand.localBuild')}</span>
-                        <span className={css.buildVersion}>{buildVersion}</span>
-                      </span>
-                    ),
-                })}
-              </span>
-            </span>
-          )
-          return darwinDesktop || !canStartSession
-            ? <span className={clsx(css.brand, css.wide)}>{identity}</span>
-            : (
-              <button
-                type="button"
-                className={clsx(css.brand, css.wide)}
-                aria-label={t('session.new.label')}
-                aria-keyshortcuts={newShortcut?.aria}
-                onClick={(event) => {
-                  if ((event.target as Element).closest('[data-copy-version]') !== null) return
-                  openNewSession()
-                }}
-              >
-                {identity}
-              </button>
-            )
-        })()}
         {!darwinDesktop && toggle}
       </div>
 
@@ -457,10 +378,6 @@ export function SidebarRoot({
         </div>
         <span className={css.scrollFade} aria-hidden="true" />
       </div>
-
-      {copiedToast !== null && (
-        <Toast key={copiedToast} tone="success" text={t('version.copied')} onDone={() => { setCopiedToast(null) }} />
-      )}
 
       {/* Footer actions stack above Settings in both sidebar widths. */}
       <div className={css.footArea}>
