@@ -115,7 +115,7 @@
 
 ### 3.1 建立二开工作区（已完成）
 
-当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，本地分支已由 `master` 重命名为 `main` 并跟踪 `origin/main`，基线提交 `e8f7b93a34`，保留完整上游历史；`origin` 已指向 cnb，`github` 指向 GitHub 镜像，两者默认分支均为 `main`，且远端只保留 `main`。工作区已包含：
+当前状态：`d:/ai/deepseek/i-do` 已从本地基线 `git clone --local` 建立，本地分支已由 `master` 重命名为 `main` 并跟踪 `origin/main`，基线版本 `0.2.2-rc.2`，保留完整上游历史；`origin` 已指向 cnb，`github` 指向 GitHub 镜像，两者默认分支均为 `main`，且远端只保留 `main`。工作区已包含：
 
 - 上游完整源码（不含 `node_modules`、构建产物）
 - `docs/logo/` 品牌素材与本文档
@@ -234,8 +234,7 @@ node scripts/brand/render-icons.mjs --source docs/logo/logo.png --output apps/de
 
 建议在根 `package.json` 增加：`"brand:icons": "node scripts/brand/render-icons.mjs"`。
 
-1. 工具输出：`icon.svg`（1104 画布，PWA 图标源）、`icon-windows.svg`（1024 画布，含 `tray-glyph`）、`icon-macos.svg`（1104 画布）、三个同名 PNG、`tray-windows.ico`（7 帧）、`website/public/wordmark.svg`，以及 `docs/logo/preview-*.png`。
-   electron-builder 的 Windows/macOS 应用图标读 1024 PNG（`electron-builder-config.mjs:167/248`），`icon.png` 另作为运行时资源被复制进安装目录（`:162`）。
+1. 工具输出：`icon.svg`（1104 画布，PWA 图标源）、`icon-windows.svg`（1024 画布，含 `tray-glyph`）、`icon-macos.svg`（1104 画布）、三个同名 PNG、`tray-windows.ico`（7 帧）、`website/public/wordmark.svg`，以及 `docs/logo/preview-*.png`；electron-builder 的 Windows/macOS 应用图标读 1024 PNG（`electron-builder-config.mjs:167/248`），`icon.png` 另作为运行时资源被复制进安装目录（`:162`）。
 2. 校验托盘链路：`icon-windows.svg` 必须保留 `<g id="tray-glyph">` 且该组不得自带 `transform`（`render-tray-icon.ts` 会插入 1.2 倍放大，重复属性会导致 XML 解析失败）。工具已按该结构输出，可用 `pnpm --filter @deepseek-ai/dsh-desktop run render:tray-icon` 复核。
 3. 文档站字标使用 `currentColor`，保持 `config.ts:184-189` 的内联替换逻辑不变。
 4. Web/PWA 图标：运行 `apps/web/scripts/render-app-icons.ts` 从新的 `icon.svg` 重新产出。

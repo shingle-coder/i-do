@@ -14,7 +14,11 @@ i-do is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBIL
 
 Review the safety notice in [SAFETY.md](SAFETY.md) before running the project.
 
+<a id="run"></a>
+
 ## Run
+
+<a id="run-from-source"></a>
 
 ### From source
 

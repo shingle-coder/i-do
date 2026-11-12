@@ -14,7 +14,11 @@ i-do 处于 _开发者预览_ 阶段，正在快速迭代。**未来将出现破
 
 运行本项目前，请阅读 [SAFETY.zh.md](SAFETY.zh.md) 中的安全说明。
 
+<a id="run"></a>
+
 ## 运行
+
+<a id="run-from-source"></a>
 
 ### 从源码运行
 
